@@ -1,69 +1,168 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>搜尋結果</title>
-    <link rel="stylesheet" href="../static/book_display_search_styles.css">
+
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="../static/css/templatemo-topic-listing.css" rel="stylesheet">
+
 </head>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #f1f1f1;
-    }
+<body id="top">
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <i class="bi-back"></i>
+                    <span>FJU UBTP</span>
+                </a>
 
-    .logo {
-        font-size: 24px;
-    }
+                <div class="d-lg-none ms-auto me-4">
+                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
 
-    .nav {
-        display: flex;
-        align-items: center;
-    }
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    .nav-item {
-        margin-left: 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .search-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 30px 0;
-        }
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click" href="/">首頁</a>
+                        </li>
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        {% else %}
+                        <!--沒有登入-->
+                        <li class="nav-item">
+                            <a class="nav-link click" href="/login">登入</a>
+                        </li>
+                        {% endif %}
 
-        .search-box {
-            width: 400px;
-            height: 40px;
-            padding-left: 40px;
-            font-size: 18px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            background-image: url('magnifier-icon.svg');
-            background-repeat: no-repeat;
-            background-position: 10px center;
-        }
-    </style>
-<body>
-        <form action="/do_book_search" method="GET" enctype="multipart/form-data">
-            <div class="search-container">
-                <input type="text" name="search_str" placeholder="{{ search_str }}" name="search">
-                <button class="search-button" name="searchButton" type="submit">搜索</button>
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="nav-item">
+                            <a class="nav-link click" href="/star">關注中</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        {% else %}
+                        <!--沒有登入-->
+                        <li class="nav-item">
+                            <a class="nav-link click" href="/register">註冊</a>
+                        </li>
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="nav-item">
+                            <a class="nav-link click" href="/user_information">用戶頁面/功能</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="nav-item">
+                            <a class="nav-link click" href="/logout">登出</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="topics_listing">Topics Listing</a></li>
+
+                                <li><a class="dropdown-item" href="contact">Contact Form</a></li>
+                            </ul>
+                        </li>
+                    -->
+
+                        <form action="/do_book_search" method="get" class="custom-form mb-2 pb-2 mb-lg-2 mb-3"
+                            role="search">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-text bi-search" id="basic-addon1"></span>
+                                <input name="search_str" type="search" id="keyword" placeholder="書名, 科系, 老師, 課程 ..."
+                                    aria-label="Search">
+                                <button type="submit">搜下去!</button>
+                            </div>
+                        </form>
+                    </ul>
+                    {% if session['A_StuID'] %}
+                    <!--已登入-->
+                    <div class="d-none d-lg-block">
+                        <a href="/user_information" class="navbar-icon bi-person click"></a>
+                    </div>
+                    {% else %}
+                    <!--沒有登入-->
+                    {% endif %}
+                </div>
             </div>
-        </form>
-        <hr>
-        <div class="grid-container">
-            <!--從這裡-->
-            {% for book in datas %}
+        </nav>
+
+
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!--格子本體-->
+                    {% for book in datas %}
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="/book_detail/{{ book['B_BookID'] }}">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">{{ book['B_BookName'] }}</h5>
+
+                                        <p class="mb-0">NT$ {{ book['B_Price'] }}</p>
+
+                                    </div>
+                                </div>
+
+                                <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片">
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!--格子本體-->
+                    <!--從這裡-->
+                    <!--{% for book in datas %}
             <div class="grid-item">
                 <div class="image-container">
                     <a href="/book_detail/{{ book['B_BookID'] }}" class="content">
@@ -76,8 +175,157 @@
                 </div>
             </div>
             {% endfor %}
-            <!--到這裡是一個格子 一頁顯示最多16張 4*4-->
+            到這裡是一個格子 一頁顯示最多16張 4*4-->
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="faq-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="site-footer section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-12 mb-4 pb-2">
+                    <a class="navbar-brand mb-2" href="/">
+                        <i class="bi-back"></i>
+                        <span>FJU UBTP</span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="site-footer-title mb-3">頁面資源</h6>
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="/" class="site-footer-link">首頁</a>
+                        </li>
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        {% else %}
+                        <!--沒有登入-->
+                        <li class="site-footer-link-item">
+                            <a href="/login" class="site-footer-link">登入</a>
+                        </li>
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="site-footer-link-item">
+                            <a href="/star" class="site-footer-link">關注中</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        {% else %}
+                        <!--沒有登入-->
+                        <li class="site-footer-link-item">
+                            <a href="/register" class="site-footer-link">註冊</a>
+                        </li>
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="site-footer-link-item">
+                            <a class="site-footer-link" href="/user_information">用戶頁面/功能</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="site-footer-link-item">
+                            <a class="site-footer-link" href="/logout">登出</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h6 class="site-footer-title mb-3">相關資訊</h6>
+
+                    <p class="text-white d-flex mb-1">
+                        <a href="tel: 0800-092-000" class="site-footer-link">
+                            0800-092-000
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <a href="mailto:Fju_UBTP@gmail.com" class="site-footer-link">
+                            Fju_UBTP@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 Shioubi Rewrite.edition. All rights
+                        reserved.
+
+                </div>
+
+            </div>
         </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.sticky.js"></script>
+    <script src="../static/js/custom.js"></script>
+
 
 </body>
+<!-- <form action="/do_book_search" method="GET" enctype="multipart/form-data">
+            <div class="search-container">
+                <input type="text" name="search_str" placeholder="{{ search_str }}" name="search">
+                <button class="search-button" name="searchButton" type="submit">搜索</button>
+            </div>
+        </form>
+        <hr>
+        <div class="grid-container">
+            從這裡-->
+<!-- {% for book in datas %}
+            <div class="grid-item">
+                <div class="image-container">
+                    <a href="/book_detail/{{ book['B_BookID'] }}" class="content">
+                        <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片">
+                    </a>
+                </div>
+                <div class="text-container">
+                    <p>書名：{{ book['B_BookName'] }}</p>
+                    <p>售價：NT$ {{ book['B_Price'] }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            到這裡是一個格子 一頁顯示最多16張 4*4-->
+<!-- </div>-->
+
+
+</main>
+</body>
+
 </html>

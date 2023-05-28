@@ -1,40 +1,343 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/user_information_styles.css">
-  <title>個人資料頁面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="../static/css/templatemo-topic-listing.css" rel="stylesheet">
+
+    <title>個人資料頁面</title>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi-back"></i>
+                <span>FJU UBTP</span>
+            </a>
 
-  <div class="container">
-    <div class="area1">
-    <!--header預留欄位-->
-    {% extends 'layout.html' %}
-    {% block title %} 首頁 {% endblock %}
-    </div>
-    {% block content %}<!--複製這行 header-->
+            <div class="d-lg-none ms-auto me-4">
+                <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+            </div>
 
-    <div class="left">
-      <div class="left-item">
-        <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
-        <p>{{ account['A_Nickname'] }} 您好！</p>
-        <button class="button"  onclick="location.href='/user_information_profile'">個人資訊</button>
-      </div>
-    </div>
-  
-    <div class="right">
-      <div class="right-item">
-        <button class="button" onclick="location.href='/user_information_orders'">查詢訂單</button>
-        <button class="button">信用積分</button>
-        <button class="button">交易紀錄</button>
-        <button class="button" onclick="location.href='/user_information_sellerpage'">我的賣場</button>
-        <button class="button">問題回報</button>
-        <button class="button">Q&A</button>
-      </div>
-    </div>
-  </div>
-  {% endblock %}<!--複製這行 header-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click" href="/">首頁</a>
+                    </li>
+                    {% if session['A_StuID'] %}
+                    <!--已登入-->
+                    {% else %}
+                    <!--沒有登入-->
+                    <li class="nav-item">
+                        <a class="nav-link click" href="/login">登入</a>
+                    </li>
+                    {% endif %}
+
+                    {% if session['A_StuID'] %}
+                    <!--已登入-->
+                    <li class="nav-item">
+                        <a class="nav-link click" href="/star">關注中</a>
+                    </li>
+                    {% else %}
+                    <!--沒有登入-->
+                    {% endif %}
+
+                    {% if session['A_StuID'] %}
+                    <!--已登入-->
+                    {% else %}
+                    <!--沒有登入-->
+                    <li class="nav-item">
+                        <a class="nav-link click" href="/register">註冊</a>
+                    </li>
+                    {% endif %}
+
+                    {% if session['A_StuID'] %}
+                    <!--已登入-->
+                    <li class="nav-item">
+                        <a class="nav-link click" href="/user_information">用戶頁面/功能</a>
+                    </li>
+                    {% else %}
+                    <!--沒有登入-->
+                    {% endif %}
+
+                    {% if session['A_StuID'] %}
+                    <!--已登入-->
+                    <li class="nav-item">
+                        <a class="nav-link click" href="/logout">登出</a>
+                    </li>
+                    {% else %}
+                    <!--沒有登入-->
+                    {% endif %}
+
+                    <!--<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                        <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                            <li><a class="dropdown-item" href="topics_listing">Topics Listing</a></li>
+
+                            <li><a class="dropdown-item" href="contact">Contact Form</a></li>
+                        </ul>
+                    </li>
+                -->
+
+                    <form action="/do_book_search" method="get" class="custom-form mb-2 pb-2 mb-lg-2 mb-3"
+                        role="search">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-text bi-search" id="basic-addon1"></span>
+                            <input name="search_str" type="search" id="keyword" placeholder="書名, 科系, 老師, 課程 ..."
+                                aria-label="Search">
+                            <button type="submit">搜下去!</button>
+                        </div>
+                    </form>
+                </ul>
+                {% if session['A_StuID'] %}
+                <!--已登入-->
+                <div class="d-none d-lg-block">
+                    <a href="/user_information" class="navbar-icon bi-person click"></a>
+                </div>
+                {% else %}
+                <!--沒有登入-->
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+
+    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">首頁</a></li>
+
+                            <li class="breadcrumb-item active" aria-current="page">個人資料</li>
+                        </ol>
+                    </nav>
+                    <h2 class="text-white">個人資料</h2>
+                </div>
+
+                <div class="col-lg-5 col-15">
+                    <div class="custom-block bg-white shadow-lg">
+                        <a href="/user_information_profile">
+                            <form action="/do_user_information_profile_update" method="POST"
+                                enctype="multipart/form-data">
+                                <div class="d-flex">
+                                    <div>
+                                        <h4 class="mb-2">歡迎回來，{{ account['A_Nickname'] }} </h4>
+                                        <p class="mb-0">@{{ A_StuID }}</p>
+                                        <br>
+                                        <h5>暱稱：<input id="input-hidden" type="hidden"
+                                                value="{{ account['A_Nickname'] }}" class="form-contrl"
+                                                name="A_Nickname" required>{{ account['A_Nickname'] }}
+                                            <!--這邊替換位置-->
+                                        </h5>
+                                        <h5>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）
+                                            <!--這邊替換位置-->
+                                        </h5>
+                                        <h5>學號：<input id="input-hidden" type="hidden" value="{{ account['A_StuID'] }}"
+                                                class="form-contrl" name="A_StuID" readonly>{{ account['A_StuID'] }}
+                                            <!--這邊替換位置-->
+                                        </h5>
+                                        <h5>常用信箱：<input id="input-hidden" type="hidden" value="{{ account['A_Email'] }}"
+                                                class="form-contrl" name="A_Nickname" required>{{ account['A_Email'] }}
+                                            <!--這邊替換位置-->
+                                        </h5>
+                                        <h5>科系：<input id="input-hidden" type="hidden" value="{{ account['A_Major'] }}"
+                                                class="form-contrl" name="A_Nickname" required>{{ account['A_Major'] }}
+                                            <!--這邊替換位置-->
+                                        </h5>
+                                        <h5>生日：<input id="input-hidden" type="hidden"
+                                                value="{{ account['A_BirthDate'] }}" class="form-contrl"
+                                                name="A_Nickname" required>{{ account['A_BirthDate'] }}
+                                            <!--這邊替換位置-->
+                                        </h5>
+                                    </div>
+                                </div>
+                                <img src="../static/uploads/{{ account['A_image'] }}"
+                                    class="custom-block-image rounded mx-auto d-block" alt="個人頭像">
+                            </form>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-10">
+                    <div class="custom-block custom-block-overlay">
+                        <div class="d-flex flex-column h-100">
+                            <div class="custom-block-overlay-text d-flex">
+                                <div>
+                                    <h6 class="text-white mb-2">選單</h6>
+                                    <button class="btn custom-btn mt-3 mt-lg-4"
+                                        onclick="location.href='/user_information_profile_update/{{ account['A_StuID'] }}'">修改資料
+                                    </button>
+                                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">查詢訂單</a>
+                                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">交易紀錄</a>
+                                    <a href="/user_information_sellerpage" class="btn custom-btn mt-3 mt-lg-4">我的賣場</a>
+                                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">問題回報</a>
+                                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">Q&A</a>
+                                </div>
+                            </div>
+
+                            <div class="social-share d-flex">
+
+                            </div>
+
+                            <div class="section-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <footer class="site-footer section-padding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-12 mb-4 pb-2">
+                    <a class="navbar-brand mb-2" href="/">
+                        <i class="bi-back"></i>
+                        <span>FJU UBTP</span>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <h6 class="site-footer-title mb-3">頁面資源</h6>
+                    <ul class="site-footer-links">
+                        <li class="site-footer-link-item">
+                            <a href="/" class="site-footer-link">首頁</a>
+                        </li>
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        {% else %}
+                        <!--沒有登入-->
+                        <li class="site-footer-link-item">
+                            <a href="/login" class="site-footer-link">登入</a>
+                        </li>
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="site-footer-link-item">
+                            <a href="/star" class="site-footer-link">關注中</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        {% else %}
+                        <!--沒有登入-->
+                        <li class="site-footer-link-item">
+                            <a href="/register" class="site-footer-link">註冊</a>
+                        </li>
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="site-footer-link-item">
+                            <a class="site-footer-link" href="/user_information">用戶頁面/功能</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+                        {% if session['A_StuID'] %}
+                        <!--已登入-->
+                        <li class="site-footer-link-item">
+                            <a class="site-footer-link" href="/logout">登出</a>
+                        </li>
+                        {% else %}
+                        <!--沒有登入-->
+                        {% endif %}
+
+
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h6 class="site-footer-title mb-3">相關資訊</h6>
+
+                    <p class="text-white d-flex mb-1">
+                        <a href="tel: 0800-092-000" class="site-footer-link">
+                            0800-092-000
+                        </a>
+                    </p>
+
+                    <p class="text-white d-flex">
+                        <a href="mailto:Fju_UBTP@gmail.com" class="site-footer-link">
+                            Fju_UBTP@gmail.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 Shioubi Rewrite.edition. All rights
+                        reserved.
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/jquery.sticky.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <!--
+    <div class="container">
+        <div class="area1">
+
+            <div class="left">
+                <div class="left-item">
+                    <img class="profile-image" src="../static/uploads/{{ account['A_image'] }}" alt="個人頭像">
+                    <p>{{ account['A_Nickname'] }} 您好！</p>
+                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">個人資訊</a>
+                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">查詢訂單</a>
+                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">交易紀錄</a>
+                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">我的賣場</a>
+                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">問題回報</a>
+                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">Q&A</a>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="right-item">
+                    <button class="button" onclick="location.href='/user_information_orders'">查詢訂單</button>
+                    <button class="button">信用積分</button>
+                    <button class="button">交易紀錄</button>
+                    <button class="button" onclick="location.href='/user_information_sellerpage'">我的賣場</button>
+                    <button class="button">問題回報</button>
+                    <button class="button">Q&A</button>
+                </div>
+            </div>
+        </div>
+    -->
+
 </body>
+
 </html>

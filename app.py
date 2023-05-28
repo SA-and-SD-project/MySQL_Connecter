@@ -45,7 +45,7 @@ def hello_world():
 @app.route('/')
 def index():
     try:
-        return render_template("index.html")
+        return render_template("new_index.html")
     except Exception as e:
         logging.exception("Error occurred during index")
         return "An error occurred during index. Please check the error log for more information.", 500
@@ -97,7 +97,7 @@ def login():
                 if A_Password == user["A_Password"]:
                     session['A_StuID'] = user['A_StuID']
                     session['A_Email'] = user['A_Email']
-                    return render_template("index.html")
+                    return render_template("new_index.html")
                 else:
                     return "Error password and email not match"
             else:
@@ -114,7 +114,7 @@ def login():
 @app.route('/logout')
 def logout():
     session.clear()
-    return render_template("index.html")
+    return render_template("new_index.html")
     
 # 連接mysql
 def get_conn():
@@ -140,7 +140,7 @@ def insert_or_update_data(sql):
 @app.route('/user_information')
 def show_user_information():
     A_StuID = session.get('A_StuID')
-    sql = "select A_Nickname, A_image from account_manage where A_StuID = '{}'".format(A_StuID) #怎麼取A_StuID的值
+    sql = "select * from account_manage where A_StuID = '{}'".format(A_StuID) #怎麼取A_StuID的值
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -150,7 +150,7 @@ def show_user_information():
     finally:
         conn.close()
     print(sql)
-    return render_template("user_information.html", account=account)
+    return render_template("user_information.html", account=account, A_StuID=A_StuID)
 
 # 個人資料頁面
 @app.route('/user_information_profile')
@@ -235,7 +235,7 @@ def user_information_profile_update():
 #        redirect(url_for("show_user_information_profile")) #trying:重新導向並用彈出式視窗顯示成功訊息
 
 #        return "User information updated successfully!" # 舊密碼錯誤不會更新資訊，但還是顯示成功訊息
-        return redirect(url_for("show_user_information_profile")) #trying:重新導向並用彈出式視窗顯示成功訊息
+        return redirect(url_for("show_user_information")) #trying:重新導向並用彈出式視窗顯示成功訊息
 
     
     except Exception as e:
@@ -576,6 +576,16 @@ def order_book():
 def comment():
     A_CurrentuserID = session.get('A_StuID')
     return render_template("TestComments.html", A_StuID = A_CurrentuserID)
+
+#測試topic頁面功能
+@app.route('/topics_listing')
+def topics_listen():
+    return render_template("topics-listing.html")
+
+#測試contact頁面功能
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
