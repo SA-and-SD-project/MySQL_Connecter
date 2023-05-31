@@ -1,135 +1,610 @@
-{% extends 'layout.html' %}
-{% block title %} Register {% endblock %}
-{% block content %}
- <div class="container">
- <div class="row">
- <div class="col-md-6 col-md-offset-3">
- <form action="/register" method="POST">
- <div class="form-group">
- <label>學號<font color="red">*</font></label>
- <input type="text" required="required" class="form-control" name="A_StuID">
- </div>
- <div class="form-group">
- <label>常用信箱<font color="red">*</font></label>
- <input type="email" required="required" class="form-control" name="A_Email">
- </div>
- <div class="form-group">
- <label>密碼<font color="red">*</font></label>
- <input type="password" required="required" class="form-control" name="A_Password">
- </div>
- <div class="form-group">
-  <label>確認密碼<font color="red">*</font></label>
-  <input type="password" name="ConfirmPassword" required="required" oninput="setCustomValidity('');" 
-    onchange="if(document.getElementById('A_Password').value != document.getElementById('ConfirmPassword').value)
-    {setCustomValidity('密碼不相符，請重新輸入!');}"/>
-  </div>
-  <div class="form-group">
-  <label>生日</label>
-  <input type="date" class="form-control" name="A_BirthDate">
-  </div>
-  <div class="form-group">
-  <label>科系</label>
-  <select name="A_Major">
-    <option value="">請選擇你的科系</option>
+<!doctype html>
+<html lang="en">
 
-    <optgroup label="文學院">
-      <option value="中國文學系">中國文學系</option>
-      <option value="歷史學系">歷史學系</option>
-      <option value="哲學系">哲學系</option>
-    </optgroup>
-    <optgroup label="藝術學院">
-      <option value="音樂學系">音樂學系</option>
-      <option value="應用美術學系">應用美術學系</option>
-      <option value="景觀設計學系">景觀設計學系</option>
-    </optgroup>
-    <optgroup label="傳播學院">
-      <option value="影像傳播學系">影像傳播學系</option>
-      <option value="新聞傳播學系">新聞傳播學系</option>
-      <option value="廣告傳播學系">廣告傳播學系</option>
-    </optgroup>
-    <optgroup label="教育學院">
-      <option value="體育學系">體育學系</option>
-      <option value="圖書資訊學系">圖書資訊學系</option>
-    </optgroup>
-    <optgroup label="醫學院">
-      <option value="醫學系">醫學系</option>
-      <option value="護理學系">護理學系</option>
-      <option value="公共衛生學系">公共衛生學系</option>
-      <option value="臨床心理學系">臨床心理學系</option>
-      <option value="職能治療學系">職能治療學系</option>
-      <option value="呼吸治療學系">呼吸治療學系</option>
-    </optgroup>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <optgroup label="理工學院">
-      <option value="數學系">數學系</option>
-      <option value="物理學系">物理學系</option>
-      <option value="化學系">化學系</option>
-      <option value="生命科學系">生命科學系</option>
-      <option value="資訊工程學系">資訊工程學系</option>
-      <option value="電機工程學系">電機工程學系</option>
-    </optgroup>
-    <optgroup label="外國語文學院">
-      <option value="英國語文學系">英國語文學系</option>
-      <option value="德語語文學系">德語語文學系</option>
-      <option value="法國語文學系">法國語文學系</option>
-      <option value="西班牙語文學系">西班牙語文學系</option>
-      <option value="日本語文學系">日本語文學系</option>
-      <option value="義大利語文學系">義大利語文學系</option>
-    </optgroup>
-    <optgroup label="民生學院">
-      <option value="兒童與家庭學系">兒童與家庭學系</option>
-      <option value="餐旅管理學系">餐旅管理學系</option>
-      <option value="食品科學系">食品科學系</option>
-      <option value="營養科學系">營養科學系</option>
-    </optgroup>
-    <optgroup label="法律學院">
-      <option value="法律學系">法律學系</option>
-      <option value="財經法律學系">財經法律學系</option>
-      <option value="學士後法律學系">學士後法律學系</option>
-    </optgroup>
-    <optgroup label="社會科學院">
-      <option value="社會學系、所">社會學系、所</option>
-      <option value="社會工作學系、所">社會工作學系、所</option>
-      <option value="經濟學系、所">經濟學系、所</option>
-      <option value="宗教學系、所">宗教學系、所</option>
-      <option value="心理學系、所">心理學系、所</option>
-    </optgroup>
-    <optgroup label="管理學院">
-      <option value="企業管理學系">企業管理學系</option>
-      <option value="會計學系">會計學系</option>
-      <option value="統計資訊學系">統計資訊學系</option>
-      <option value="金融與國際企業學系">金融與國際企業學系</option>
-      <option value="資訊管理學系">資訊管理學系</option>
-    </optgroup>
-    <optgroup label="織品服裝學院">
-      <option value="織品服裝學系">織品服裝學系</option>
-    </optgroup>
-    <optgroup label="進修部">
-      <option value="中國文學系">中國文學系</option>
-      <option value="歷史學系">歷史學系</option>
-      <option value="哲學系">哲學系</option>
-      <option value="應用美術學系">應用美術學系</option>
-      <option value="圖書資訊學系">圖書資訊學系</option>
-      <option value="英國語文學系">英國語文學系</option>
-      <option value="日本語文學系">日本語文學系</option>
-      <option value="餐旅管理學系">餐旅管理學系</option>
-      <option value="法律學系">法律學系</option>
-      <option value="經濟學系">經濟學系</option>
-      <option value="宗教學系">宗教學系</option>
-    </optgroup>
-  </select>
-  </div>
-  <div class="form-group">
-    <label>實名認證<font color="red">*</font></label>
-    <input type="radio" required="required" class="form-group" name="A_RealNameVerify" value="0" /> No
-    <input type="radio" required="required" class="form-group" name="A_RealNameVerify" value="1" /> Yes
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Topic Listing Contact Page</title>
+
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap"
+    rel="stylesheet">
+
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="../static/css/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="../static/css/templatemo-topic-listing.css" rel="stylesheet">
+  <!--
+
+TemplateMo 590 topic listing
+
+https://templatemo.com/tm-590-topic-listing
+
+-->
+</head>
+
+<body class="topics-listing-page" id="top">
+
+  <main>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <i class="bi-back"></i>
+          <span>FJU UBTP</span>
+        </a>
+
+        <div class="d-lg-none ms-auto me-4">
+          <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-lg-5 me-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link click" href="/">首頁</a>
+            </li>
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            {% else %}
+            <!--沒有登入-->
+            <li class="nav-item">
+              <a class="nav-link click" href="/login">登入</a>
+            </li>
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            <li class="nav-item">
+              <a class="nav-link click" href="/star">關注中</a>
+            </li>
+            {% else %}
+            <!--沒有登入-->
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            {% else %}
+            <!--沒有登入-->
+            <li class="nav-item">
+              <a class="nav-link click" href="/register">註冊</a>
+            </li>
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            <li class="nav-item">
+              <a class="nav-link click" href="/user_information">用戶頁面/功能</a>
+            </li>
+            {% else %}
+            <!--沒有登入-->
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            <li class="nav-item">
+              <a class="nav-link click" href="/logout">登出</a>
+            </li>
+            {% else %}
+            <!--沒有登入-->
+            {% endif %}
+
+            <!--<li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarLightDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="topics_listing">Topics Listing</a></li>
+
+                                <li><a class="dropdown-item" href="contact">Contact Form</a></li>
+                            </ul>
+                        </li>
+                    -->
+
+            <form action="/do_book_search" method="get" class="custom-form mb-2 pb-2 mb-lg-2 mb-3" role="search">
+              <div class="input-group input-group-sm">
+                <span class="input-group-text bi-search" id="basic-addon1"></span>
+                <input name="search_str" type="search" id="keyword" placeholder="書名, 科系, 老師, 課程 ..."
+                  aria-label="Search">
+                <button type="submit">搜下去!</button>
+              </div>
+            </form>
+          </ul>
+          {% if session['A_StuID'] %}
+          <!--已登入-->
+          <div class="d-none d-lg-block">
+            <a href="/user_information" class="navbar-icon bi-person click"></a>
+          </div>
+          {% else %}
+          <!--沒有登入-->
+          {% endif %}
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5 col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">首頁</a></li>
+
+                <li class="breadcrumb-item active" aria-current="page">註冊</li>
+              </ol>
+            </nav>
+            <h2 class="text-white">註冊</h2>
+            <br>
+            <form action="/register" method="POST">
+              <div class="form-floating">
+                <input type="text" name="A_StuID" id="name" class="form-control" placeholder="Name" required="required">
+
+                <label for="floatingInput">請輸入學號，例: 410402408 </label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="email" name="A_Email" class="form-control" placeholder="Name" required="required">
+
+                <label for="floatingInput">請輸入常用信箱，(務必確認能夠收信)</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="password" name="A_Password" class="form-control" placeholder="Name" required="required">
+
+                <label for="floatingInput">密碼</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="password" name="ConfirmPassword" class="form-control" placeholder="Name"
+                  required="required" oninput="setCustomValidity('');" onchange="if(document.getElementById('A_Password').value != document.getElementById('ConfirmPassword').value)
+                              {setCustomValidity('密碼不相符，請重新輸入!');}" />
+                <label for="floatingInput">再次確認密碼</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <input type="date" name="A_BirthDate" class="form-control" placeholder="Name" required="required">
+
+                <label for="floatingInput">生日</label>
+              </div>
+              <br>
+              <div class="form-floating">
+                <label for="floatingInput"></label>
+                <select name="A_Major">
+                  <option value="">請選擇你的科系</option>
+
+                  <optgroup label="文學院">
+                    <option value="中國文學系">中國文學系</option>
+                    <option value="歷史學系">歷史學系</option>
+                    <option value="哲學系">哲學系</option>
+                  </optgroup>
+                  <optgroup label="藝術學院">
+                    <option value="音樂學系">音樂學系</option>
+                    <option value="應用美術學系">應用美術學系</option>
+                    <option value="景觀設計學系">景觀設計學系</option>
+                  </optgroup>
+                  <optgroup label="傳播學院">
+                    <option value="影像傳播學系">影像傳播學系</option>
+                    <option value="新聞傳播學系">新聞傳播學系</option>
+                    <option value="廣告傳播學系">廣告傳播學系</option>
+                  </optgroup>
+                  <optgroup label="教育學院">
+                    <option value="體育學系">體育學系</option>
+                    <option value="圖書資訊學系">圖書資訊學系</option>
+                  </optgroup>
+                  <optgroup label="醫學院">
+                    <option value="醫學系">醫學系</option>
+                    <option value="護理學系">護理學系</option>
+                    <option value="公共衛生學系">公共衛生學系</option>
+                    <option value="臨床心理學系">臨床心理學系</option>
+                    <option value="職能治療學系">職能治療學系</option>
+                    <option value="呼吸治療學系">呼吸治療學系</option>
+                  </optgroup>
+
+                  <optgroup label="理工學院">
+                    <option value="數學系">數學系</option>
+                    <option value="物理學系">物理學系</option>
+                    <option value="化學系">化學系</option>
+                    <option value="生命科學系">生命科學系</option>
+                    <option value="資訊工程學系">資訊工程學系</option>
+                    <option value="電機工程學系">電機工程學系</option>
+                  </optgroup>
+                  <optgroup label="外國語文學院">
+                    <option value="英國語文學系">英國語文學系</option>
+                    <option value="德語語文學系">德語語文學系</option>
+                    <option value="法國語文學系">法國語文學系</option>
+                    <option value="西班牙語文學系">西班牙語文學系</option>
+                    <option value="日本語文學系">日本語文學系</option>
+                    <option value="義大利語文學系">義大利語文學系</option>
+                  </optgroup>
+                  <optgroup label="民生學院">
+                    <option value="兒童與家庭學系">兒童與家庭學系</option>
+                    <option value="餐旅管理學系">餐旅管理學系</option>
+                    <option value="食品科學系">食品科學系</option>
+                    <option value="營養科學系">營養科學系</option>
+                  </optgroup>
+                  <optgroup label="法律學院">
+                    <option value="法律學系">法律學系</option>
+                    <option value="財經法律學系">財經法律學系</option>
+                    <option value="學士後法律學系">學士後法律學系</option>
+                  </optgroup>
+                  <optgroup label="社會科學院">
+                    <option value="社會學系、所">社會學系、所</option>
+                    <option value="社會工作學系、所">社會工作學系、所</option>
+                    <option value="經濟學系、所">經濟學系、所</option>
+                    <option value="宗教學系、所">宗教學系、所</option>
+                    <option value="心理學系、所">心理學系、所</option>
+                  </optgroup>
+                  <optgroup label="管理學院">
+                    <option value="企業管理學系">企業管理學系</option>
+                    <option value="會計學系">會計學系</option>
+                    <option value="統計資訊學系">統計資訊學系</option>
+                    <option value="金融與國際企業學系">金融與國際企業學系</option>
+                    <option value="資訊管理學系">資訊管理學系</option>
+                  </optgroup>
+                  <optgroup label="織品服裝學院">
+                    <option value="織品服裝學系">織品服裝學系</option>
+                  </optgroup>
+                  <optgroup label="進修部">
+                    <option value="中國文學系">中國文學系</option>
+                    <option value="歷史學系">歷史學系</option>
+                    <option value="哲學系">哲學系</option>
+                    <option value="應用美術學系">應用美術學系</option>
+                    <option value="圖書資訊學系">圖書資訊學系</option>
+                    <option value="英國語文學系">英國語文學系</option>
+                    <option value="日本語文學系">日本語文學系</option>
+                    <option value="餐旅管理學系">餐旅管理學系</option>
+                    <option value="法律學系">法律學系</option>
+                    <option value="經濟學系">經濟學系</option>
+                    <option value="宗教學系">宗教學系</option>
+                  </optgroup>
+                </select>
+              </div>
+              <br>
+              <div class="form-floating">
+                <input id="verify-input-hidden" type="hidden" class="form-contrl" name="A_RealNameVerify">
+                <h5 class="text-white">是否需要實名認證?(請輸入Y/N)</h5>
+                <input type="text" id="verify-input" name="A_RealNameVerify_original" class="form-contrl"
+                  required="required">
+              </div>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <script>
+                $(document).ready(function () {
+                  $("#submit-btn").click(function (e) {
+                    var value = $("#verify-input").val().toUpperCase();
+                    if (value === 'Y') {
+                      $("#verify-input-hidden").val(1);
+                    } else if (value === 'N') {
+                      $("#verify-input-hidden").val(0);
+                    } else {
+                      alert('請輸入Y或N，注意大小寫喔!');
+                      e.preventDefault();
+                    }
+                  });
+                });
+              </script>
+              <br>
+              <div class="form-floating">
+                <button class="btn btn-primary" id="submit-btn">註冊</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="section-padding section-bg">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-12 col-12">
+            <h3 class="mb-4 pb-2">We'd love to hear from you</h3>
+          </div>
+
+          <div class="col-lg-6 col-12">
+            <form action="#" method="post" class="custom-form contact-form" role="form">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-floating">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="">
+
+                    <label for="floatingInput">Name</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-floating">
+                    <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
+                      placeholder="Email address" required="">
+
+                    <label for="floatingInput">Email address</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 col-12">
+                  <div class="form-floating">
+                    <input type="text" name="subject" id="name" class="form-control" placeholder="Name" required="">
+
+                    <label for="floatingInput">Subject</label>
+                  </div>
+
+                  <div class="form-floating">
+                    <textarea class="form-control" id="message" name="message"
+                      placeholder="Tell me about the project"></textarea>
+
+                    <label for="floatingTextarea">Tell me about the project</label>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 ms-auto">
+                  <button type="submit" class="form-control">Submit</button>
+                </div>
+
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-5 col-12 mx-auto mt-5 mt-lg-0">
+            <iframe class="google-map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.065641062665!2d-122.4230416990949!3d37.80335401520422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858127459fabad%3A0x808ba520e5e9edb7!2sFrancisco%20Park!5e1!3m2!1sen!2sth!4v1684340239744!5m2!1sen!2sth"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <h5 class="mt-4 mb-2">Topic Listing Center</h5>
+
+            <p>Bay St &amp;, Larkin St, San Francisco, CA 94109, United States</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-padding">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-12 mb-4 pb-2">
+          <a class="navbar-brand mb-2" href="/">
+            <i class="bi-back"></i>
+            <span>FJU UBTP</span>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6">
+          <h6 class="site-footer-title mb-3">頁面資源</h6>
+          <ul class="site-footer-links">
+            <li class="site-footer-link-item">
+              <a href="/" class="site-footer-link">首頁</a>
+            </li>
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            {% else %}
+            <!--沒有登入-->
+            <li class="site-footer-link-item">
+              <a href="/login" class="site-footer-link">登入</a>
+            </li>
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            <li class="site-footer-link-item">
+              <a href="/star" class="site-footer-link">關注中</a>
+            </li>
+            {% else %}
+            <!--沒有登入-->
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            {% else %}
+            <!--沒有登入-->
+            <li class="site-footer-link-item">
+              <a href="/register" class="site-footer-link">註冊</a>
+            </li>
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            <li class="site-footer-link-item">
+              <a class="site-footer-link" href="/user_information">用戶頁面/功能</a>
+            </li>
+            {% else %}
+            <!--沒有登入-->
+            {% endif %}
+
+            {% if session['A_StuID'] %}
+            <!--已登入-->
+            <li class="site-footer-link-item">
+              <a class="site-footer-link" href="/logout">登出</a>
+            </li>
+            {% else %}
+            <!--沒有登入-->
+            {% endif %}
+
+
+
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h6 class="site-footer-title mb-3">相關資訊</h6>
+
+          <p class="text-white d-flex mb-1">
+            <a href="tel: 0800-092-000" class="site-footer-link">
+              0800-092-000
+            </a>
+          </p>
+
+          <p class="text-white d-flex">
+            <a href="mailto:Fju_UBTP@gmail.com" class="site-footer-link">
+              Fju_UBTP@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+
+          <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 Shioubi Rewrite.edition. All rights
+            reserved.
+
+        </div>
+
+      </div>
     </div>
- <div class="form-group">
+  </footer>
 
- <button class="btn btn-primary">Register</button>
- </div>
- </form>
- </div>
- </div>
-</div>
-{% endblock %}
+  <!-- JAVASCRIPT FILES -->
+  <script src="../static/js/jquery.min.js"></script>
+  <script src="../static/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/jquery.sticky.js"></script>
+  <script src="../static/js/custom.js"></script>
+
+
+  <!--<div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <form action="/register" method="POST">
+          <div class="form-group">
+            <label>(*必填欄位)學號</label>
+            <input type="text" required="required" class="form-control" name="A_StuID">
+          </div>
+          <div class="form-group">
+            <label>(*必填欄位)常用信箱</label>
+            <input type="email" required="required" class="form-control" name="A_Email">
+          </div>
+          <div class="form-group">
+            <label>(*必填欄位)密碼</label>
+            <input type="password" required="required" class="form-control" name="A_Password">
+          </div>
+          <div class="form-group">
+            <label>(*必填欄位)確認密碼</label>
+            <input type="password" name="ConfirmPassword" required="required" oninput="setCustomValidity('');" onchange="if(document.getElementById('A_Password').value != document.getElementById('ConfirmPassword').value)
+    {setCustomValidity('密碼不相符，請重新輸入!');}" />
+          </div>
+          <div class="form-group">
+            <label>生日</label>
+            <input type="date" class="form-control" name="A_BirthDate">
+          </div>
+          <div class="form-group">
+            <label>科系</label>
+            <select name="A_Major">
+              <option value="">請選擇你的科系</option>
+
+              <optgroup label="文學院">
+                <option value="中國文學系">中國文學系</option>
+                <option value="歷史學系">歷史學系</option>
+                <option value="哲學系">哲學系</option>
+              </optgroup>
+              <optgroup label="藝術學院">
+                <option value="音樂學系">音樂學系</option>
+                <option value="應用美術學系">應用美術學系</option>
+                <option value="景觀設計學系">景觀設計學系</option>
+              </optgroup>
+              <optgroup label="傳播學院">
+                <option value="影像傳播學系">影像傳播學系</option>
+                <option value="新聞傳播學系">新聞傳播學系</option>
+                <option value="廣告傳播學系">廣告傳播學系</option>
+              </optgroup>
+              <optgroup label="教育學院">
+                <option value="體育學系">體育學系</option>
+                <option value="圖書資訊學系">圖書資訊學系</option>
+              </optgroup>
+              <optgroup label="醫學院">
+                <option value="醫學系">醫學系</option>
+                <option value="護理學系">護理學系</option>
+                <option value="公共衛生學系">公共衛生學系</option>
+                <option value="臨床心理學系">臨床心理學系</option>
+                <option value="職能治療學系">職能治療學系</option>
+                <option value="呼吸治療學系">呼吸治療學系</option>
+              </optgroup>
+
+              <optgroup label="理工學院">
+                <option value="數學系">數學系</option>
+                <option value="物理學系">物理學系</option>
+                <option value="化學系">化學系</option>
+                <option value="生命科學系">生命科學系</option>
+                <option value="資訊工程學系">資訊工程學系</option>
+                <option value="電機工程學系">電機工程學系</option>
+              </optgroup>
+              <optgroup label="外國語文學院">
+                <option value="英國語文學系">英國語文學系</option>
+                <option value="德語語文學系">德語語文學系</option>
+                <option value="法國語文學系">法國語文學系</option>
+                <option value="西班牙語文學系">西班牙語文學系</option>
+                <option value="日本語文學系">日本語文學系</option>
+                <option value="義大利語文學系">義大利語文學系</option>
+              </optgroup>
+              <optgroup label="民生學院">
+                <option value="兒童與家庭學系">兒童與家庭學系</option>
+                <option value="餐旅管理學系">餐旅管理學系</option>
+                <option value="食品科學系">食品科學系</option>
+                <option value="營養科學系">營養科學系</option>
+              </optgroup>
+              <optgroup label="法律學院">
+                <option value="法律學系">法律學系</option>
+                <option value="財經法律學系">財經法律學系</option>
+                <option value="學士後法律學系">學士後法律學系</option>
+              </optgroup>
+              <optgroup label="社會科學院">
+                <option value="社會學系、所">社會學系、所</option>
+                <option value="社會工作學系、所">社會工作學系、所</option>
+                <option value="經濟學系、所">經濟學系、所</option>
+                <option value="宗教學系、所">宗教學系、所</option>
+                <option value="心理學系、所">心理學系、所</option>
+              </optgroup>
+              <optgroup label="管理學院">
+                <option value="企業管理學系">企業管理學系</option>
+                <option value="會計學系">會計學系</option>
+                <option value="統計資訊學系">統計資訊學系</option>
+                <option value="金融與國際企業學系">金融與國際企業學系</option>
+                <option value="資訊管理學系">資訊管理學系</option>
+              </optgroup>
+              <optgroup label="織品服裝學院">
+                <option value="織品服裝學系">織品服裝學系</option>
+              </optgroup>
+              <optgroup label="進修部">
+                <option value="中國文學系">中國文學系</option>
+                <option value="歷史學系">歷史學系</option>
+                <option value="哲學系">哲學系</option>
+                <option value="應用美術學系">應用美術學系</option>
+                <option value="圖書資訊學系">圖書資訊學系</option>
+                <option value="英國語文學系">英國語文學系</option>
+                <option value="日本語文學系">日本語文學系</option>
+                <option value="餐旅管理學系">餐旅管理學系</option>
+                <option value="法律學系">法律學系</option>
+                <option value="經濟學系">經濟學系</option>
+                <option value="宗教學系">宗教學系</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>(*必填欄位)實名認證</label>
+            <input type="radio" required="required" class="form-group" name="A_RealNameVerify" value="0" /> No
+            <input type="radio" required="required" class="form-group" name="A_RealNameVerify" value="1" /> Yes
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>-->
+
+</body>
+
+</html>
