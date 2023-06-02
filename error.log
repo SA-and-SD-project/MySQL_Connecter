@@ -15017,3 +15017,48 @@ INFO:werkzeug:127.0.0.1 - - [29/May/2023 05:00:31] "[36mGET /static/js/bootstra
 INFO:werkzeug:127.0.0.1 - - [29/May/2023 05:00:31] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [29/May/2023 05:00:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [29/May/2023 05:00:31] "[36mGET /static/uploads/FwVPVbpaQAU-A0b.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 136-055-317
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:31] "GET /static/images/home.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:31] "GET /static/images/login.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:31] "GET /static/images/registration.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:31] "GET /static/images/magnifier.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:32] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:32] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:33] "[36mGET /static/images/login.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:33] "[36mGET /static/images/registration.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:33] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:39] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:39] "[36mGET /static/images/home.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:39] "GET /static/images/logout.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:39] "GET /static/images/user.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:39] "GET /static/images/star.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:39] "[36mGET /static/images/magnifier.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:42] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:42] "GET /static/user_information_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:42] "GET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:44] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:44] "GET /static/user_information_orders_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:44] "GET /static/user_information_orders_script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:44] "GET /static/uploads/GearUp.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:48] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:48] "GET /static/user_information_sellerpage_styles.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:49] "GET /static/user_information_sellerpage_script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:49] "GET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:49] "GET /static/uploads/EssentialReading.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:49] "GET /static/uploads/statistics.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:49] "GET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:54] "[32mPOST /do_user_information_seller_rating/10 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:54] "GET /user_information_sellerpage?tab=finished HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:54] "[36mGET /static/user_information_sellerpage_styles.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:54] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:54] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:55] "[36mGET /static/uploads/41l-8ANsfoL%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:55] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/Jun/2023 23:10:55] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
