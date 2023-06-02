@@ -304,6 +304,38 @@ def show_user_information_sellerpage():
 
     return render_template("user_information_sellerpage.html", datas_uploaded = datas_uploaded, datas_processing = datas_processing, datas_finished = datas_finished)
 
+# [賣家介面] 下架書籍
+@app.route('/book_delete/<B_BookID>')
+def book_delete(B_BookID):
+    sql_disable_fk_check = "SET FOREIGN_KEY_CHECKS=0;"
+    sql_delete_book = "DELETE FROM book_information WHERE B_BookID='{}';".format(B_BookID)
+    sql_enable_fk_check = "SET FOREIGN_KEY_CHECKS=1;"
+    
+    # "ALTER TABLE" 刪除order_information表中的外部關鍵字約束
+    sql_alter_fk_constraint = "ALTER TABLE order_information DROP FOREIGN KEY order_information_ibfk_3;"
+    
+    insert_or_update_data(sql_disable_fk_check)
+    insert_or_update_data(sql_alter_fk_constraint)
+    insert_or_update_data(sql_delete_book)
+    insert_or_update_data(sql_enable_fk_check)
+    print(sql_alter_fk_constraint)
+    print(sql_delete_book)
+
+    return redirect('/user_information_sellerpage') #重新導向(尚未導至已上架分頁)
+
+# [賣家介面] 賣家評價功能
+@app.route('/do_user_information_seller_rating/<B_BookID>', methods=['POST'])
+def user_information_seller_rating(B_BookID):
+    print(request.form)
+    O_SalerRating = request.form.get("O_SalerRating")
+    sql = f'''
+    update order_information set O_SalerRating={O_SalerRating}
+    where B_BookID={B_BookID}
+    '''
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
+
 # 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
 @app.route('/user_information_orders')
 def show_user_information_orders():
@@ -363,19 +395,6 @@ def show_user_information_orders():
     print(sql_finished)
 
     return render_template("user_information_orders.html", datas_ordered = datas_ordered, datas_processing = datas_processing, datas_finished = datas_finished)
-
-# [賣家介面] 賣家評價功能
-@app.route('/do_user_information_seller_rating/<B_BookID>', methods=['POST'])
-def user_information_seller_rating(B_BookID):
-    print(request.form)
-    O_SalerRating = request.form.get("O_SalerRating")
-    sql = f'''
-    update order_information set O_SalerRating={O_SalerRating}
-    where B_BookID={B_BookID}
-    '''
-    print(sql)
-    insert_or_update_data(sql)
-    return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
 
 # [查詢訂單] 買家評價功能
 @app.route('/do_user_information_buyer_rating/<B_BookID>', methods=['POST'])
