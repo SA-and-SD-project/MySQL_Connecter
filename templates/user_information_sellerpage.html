@@ -315,7 +315,10 @@ https://templatemo.com/tm-590-topic-listing
                                                 </ul>
                                                 <input type="hidden" name="O_SalerRating" id="ratingValueInput" value="{{ book['O_SalerRating'] }}">
 
-                                                <button id="editBtn" type="submit" name="submit">評價</button>
+                                                <button id="editBtn" type="submit" name="submit"
+                                                    {% if book['O_SalerRating'] != 0 %} disabled {% endif %}>
+                                                評價
+                                            </button>
                                             </form>
                                         </div>
                                     </div>
