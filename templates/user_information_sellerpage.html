@@ -29,10 +29,147 @@ https://templatemo.com/tm-590-topic-listing
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var commentList = document.getElementsByClassName('comment')[0].getElementsByTagName('li');
+            var backendValue = 3;
+
+            for (var i = 0; i < commentList.length; i++) {
+                var value = parseInt(commentList[i].getAttribute('value'));
+
+                if (value <= backendValue) {
+                    commentList[i].innerHTML = '★';
+                }
+            }
+        });
+    </script>
+    <script>
         $(function () {
             // 绑定按钮的點擊事件
             $("#editBtn").click(toggleEditMode);
         });
+    </script>
+
+    <title>Custom Layout</title>
+    <style>
+        .stack-test{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+            * {
+	            padding:0;
+	            margin:0;
+            }
+ 
+            .comment li {
+                font-size:40px;
+	            float:left;
+                color: teal;
+            }
+            .comment-2 li {
+                font-size:40px;
+	            float:left;
+                color: yellow;
+            }
+        ul {
+	        list-style:none;
+         }
+       
+    </style>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+
+        tabButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+      const targetId = button.getAttribute('data-target');
+      const targetContent = document.getElementById(targetId);
+
+      // 隱藏所有內容區塊
+      document.querySelectorAll('.content').forEach(function(content) {
+        content.classList.add('hide');
+      });
+
+      // 顯示與所點選標籤相關的內容區塊
+      targetContent.classList.remove('hide');
+    });
+  });
+
+  const commentSection = $(".comment-2");
+  const editBtn = $("#editBtn");
+  var enableEdit = true; // 初始為可編輯狀態
+  var backendValue = 0; // 從資料庫讀取的值，此處假設初始值為 0，測試的時候自己改
+
+  // 進行初始判斷
+  if (backendValue !== 0) {
+    // 讀取值不為 0 時的操作
+    editBtn.text("已評價");
+    editBtn.prop("disabled", true);
+
+    // 鎖定星星，使其不能互動
+    commentSection.off("mouseenter", "li", starHoverEnter);
+    commentSection.off("mouseleave", starHoverLeave);
+    commentSection.off("click", "li", starClick);
+
+    // 星星替換的相關邏輯
+    const commentList = commentSection.find('li');
+    for (var i = 0; i < backendValue; i++) {
+      commentList.eq(i).text("★");
+    }
+  } else {
+    // 讀取值為 0 時的操作
+    editBtn.on("click", function() {
+      if (enableEdit) {
+        var confirmation = confirm("確定送出評價?");
+        if (confirmation) {
+          enableEdit = false; // 鎖定按鈕
+          editBtn.text("已評價");
+          
+          // 提交評價給後端的相關動作
+          //..
+          //..
+          //End...//
+          
+          // 鎖定星星，使其不能互動
+          commentSection.off("mouseenter", "li", starHoverEnter);
+          commentSection.off("mouseleave", starHoverLeave);
+          commentSection.off("click", "li", starClick);
+
+          // 提交評價給後端的相關動作
+
+         /* 這是網頁重新整理，接完後端後打開可以測試有沒有抓到值
+         location.reload(); 
+         */
+        }
+      }
+    });
+
+    commentSection.on("mouseenter", "li", starHoverEnter);
+    commentSection.on("mouseleave", starHoverLeave);
+    commentSection.on("click", "li", starClick);
+  }
+
+  function starHoverEnter() {
+    if (enableEdit) {
+      $(this).text("★").prevAll("li").text("★").end().nextAll("li").text("☆");
+    }
+  }
+
+  function starHoverLeave() {
+    if (enableEdit) {
+      commentSection.children("li").text("☆");
+      commentSection.find(".clicked").text("★").prevAll("li").text("★").end().nextAll("li").text("☆");
+    }
+  }
+
+  function starClick() {
+    if (enableEdit) {
+      $(this).addClass("clicked").siblings("li").removeClass("clicked");
+    }
+  }
+});
+
     </script>
 
     <title>Custom Layout</title>
@@ -192,6 +329,12 @@ https://templatemo.com/tm-590-topic-listing
                 <div class="row">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="finance-tab" data-bs-toggle="tab"
+                                data-bs-target="#finance-tab-pane" type="button" role="tab"
+                                aria-controls="finance-tab-pane" aria-selected="false">已上架</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="processing" data-bs-toggle="tab"
                                 data-bs-target="#design-tab-pane" type="button" role="tab"
                                 aria-controls="design-tab-pane" aria-selected="true">進行中</button>
@@ -255,21 +398,54 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
                                             </div>
-                                            <form action="/do_user_information_seller_rating/{{ book['B_BookID'] }}"
-                                                method="POST">
-                                                <ul class="comment" size="20">
+                                            <!--已完成訂單：評分功能-->
+                                            <div class="stack-test"><!--重疊測試-->
+                                                <ul class="comment" >
                                                     <li value="1">☆</li>
                                                     <li value="2">☆</li>
                                                     <li value="3">☆</li>
                                                     <li value="4">☆</li>
                                                     <li value="5">☆</li>
                                                 </ul>
+                                                <!--這邊的觸發要刪掉改成彈窗的觸發-->
+                                                <form action="/do_user_information_seller_rating/{{ book['B_BookID'] }}"
+                                                    method="POST">
+                                                    <ul class="comment-2">
+                                                        <li value="1">☆</li>
+                                                        <li value="2">☆</li>
+                                                        <li value="3">☆</li>
+                                                        <li value="4">☆</li>
+                                                        <li value="5">☆</li>
+                                                    </ul>
+                                                    
+                                                </form>
+                                                
+                                            </div>
+                                            <button id="editBtn" onclick="toggleEditMode()">評價</button>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
 
-                                                <input type="number" name="O_SalerRating"
-                                                    value="{{ book['O_SalerRating'] }}" />
-                                                <!--暫時替代方案:直接輸數字-->
-                                                <button id="editBtn" type="submit" name="submit">評價</button>
-                                            </form>
+                            <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel"
+                                aria-labelledby="finance-tab" tabindex="0">
+                                <div class="row">
+                                    <!--書籍篩選: 已上架-->
+                                    {% for book in datas_uploaded %}
+                                    <div class="d-flex">
+                                        <div class="col-lg-2 col-4 mt-3 mx-10">
+                                            <img src="../static/uploads/{{ book['B_BookPic'] }}"
+                                                class="custom-block-image img-fluid" alt="Image">
+                                        </div>
+                                        <div class="custom-block-topics-listing-info d-flex">
+                                            <div>
+                                                <h4 class="mb-2">書名：{{ book['B_BookName'] }}</h4>
+                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
+                                            </div>
+                                            <button class="button modify"
+                                                onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
+                                            <button class="button remove">下架</button>
                                         </div>
                                     </div>
                                     {% endfor %}

@@ -22,9 +22,33 @@
     <link href="../static/css/templatemo-topic-listing.css" rel="stylesheet">
 
 <script src="../static/book_detail_script.js"></script>
+
+<script>
+    var n = {
+        {
+            book['B_BookStatus']
+        }
+    };
+    var bookStatusElement = document.getElementById("book_status");
+    if (n == 1) {
+        bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
+    } else if (n == 2) {
+        bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
+    } else if (n == 3) {
+        bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
+    } else if (n == 4) {
+        bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
+    } else if (n == 5) {
+        bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
+    } else {
+        bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
+    }
+</script>
+
 </head>
 
 <body id="top">
+    
     <main>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -146,10 +170,10 @@
                     </div>
 
                     <div class="clearfix">
-                        <form method="POST" action="/order">
+                        <form id="purchaseForm" method="POST" action="/order">
                             <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
-                            <button type="submit" class="btn custom-btn mt-3 mt-lg-4">
-                                購買(沒有防呆)
+                            <button type="button"  class="btn custom-btn mt-3 mt-lg-4" onclick="confirmPurchase()">
+                                購買
                             </button>
                         </form>
                     </div>
@@ -164,29 +188,28 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <p id="book-status"></p>
+                                        <p id="book_status"></p>
                                         <script>
-                                            var n = {
-                                                {
-                                                    book['B_BookStatus']
-                                                }
+                                            var statusMapping = {
+                                                1: "書本使用狀態: 全使用過",
+                                                2: "書本使用狀態: 25%未翻閱",
+                                                3: "書本使用狀態: 50%未翻閱",
+                                                4: "書本使用狀態: 75%未翻閱",
+                                                5: "書本使用狀態: 90%以上未翻閱",
                                             };
-                                            var bookStatusElement = document.getElementById("book-status");
-                                            if (n == 1) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
-                                            } else if (n == 2) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
-                                            } else if (n == 3) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
-                                            } else if (n == 4) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
-                                            } else if (n == 5) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
+                                            
+                                            var n = {{ book['B_BookStatus'] }};
+                                            var bookStatusElement = document.getElementById("book_status");
+                                            
+                                            if (statusMapping[n]) {
+                                                bookStatusElement.innerHTML = statusMapping[n];
                                             } else {
                                                 bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
                                             }
+                                            
                                         </script>
                                     </button>
+                                    
                                 </h2>
 
                                 <div id="collapseOne" class="accordion-collapse collapse show"
@@ -629,6 +652,7 @@
     <script src="../static/js/bootstrap.bundle.min.js"></script>
     <script src="../static/js/jquery.sticky.js"></script>
     <script src="../static/js/custom.js"></script>
+    <script src="../static/js/botton alert.js"></script>
 
 
 </body>
