@@ -181,7 +181,7 @@
                             <div class="form-floating">
                                 <label for="floatingInput"></label>
                                 <select name="B_BookStatus">
-                                    <option value="{{ book[ 'B_BookStatus' ] }}" required>{{ book[ 'B_BookStatus' ] }}</option>
+                                    <option value="{{ book[ 'B_BookStatus' ] }}" id="book-status" required></option>
                                     <option value=1>全使用過</option>
                                     <option value=2>25%未翻閱</option>
                                     <option value=3>50%未翻閱</option>
@@ -189,6 +189,25 @@
                                     <option value=5>90%以上未翻閱</option>
                                 </select>
                             </div>
+
+                            <script>
+                                var n = {{ book['B_BookStatus'] }};
+                                var bookStatusElement = document.getElementById("book-status");
+                                if (n == 1) {
+                                    bookStatusElement.innerHTML = "全使用過";
+                                } else if (n == 2) {
+                                    bookStatusElement.innerHTML = "25%未翻閱";
+                                } else if (n == 3) {
+                                    bookStatusElement.innerHTML = "50%未翻閱";
+                                } else if (n == 4) {
+                                    bookStatusElement.innerHTML = "75%未翻閱";
+                                } else if (n == 5) {
+                                    bookStatusElement.innerHTML = "90%以上未翻閱";
+                                } else {
+                                    bookStatusElement.innerHTML = "未顯示";
+                                }
+                            </script>
+
                             <br>
                             <div class="form-floating">
                                 <h5 class="text-white">使用痕跡、筆跡、汙損敘述<font color="red">*</font></h5>
