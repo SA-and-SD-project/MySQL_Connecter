@@ -321,7 +321,36 @@ def book_delete(B_BookID):
     print(sql_alter_fk_constraint)
     print(sql_delete_book)
 
-    return redirect('/user_information_sellerpage') #重新導向(尚未導至已上架分頁)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面(尚未導至已上架分頁)
+
+# [賣家介面] 我已出貨按鈕 (B_SaleStatus --> '賣家已出貨')
+@app.route('/do_saler_delivered/<B_BookID>')
+def saler_delivered(B_BookID):
+    sql = "update book_information set B_SaleStatus='賣家已出貨' where B_BookID={}".format(B_BookID)
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
+# [賣家介面] 確認按鈕 (B_SaleStatus --> '賣家已確認')
+@app.route('/do_saler_check/<B_BookID>')
+def saler_check(B_BookID):
+    sql = "update book_information set B_SaleStatus='賣家已確認' where B_BookID={}".format(B_BookID)
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
+# [賣家介面] 取消按鈕 (B_SaleStatus --> '賣家已上架'，可重新被搜尋及下單)
+@app.route('/do_saler_cancel/<B_BookID>')
+def saler_cancel(B_BookID):
+    sql_ststus = "update book_information set B_SaleStatus='賣家已上架' where B_BookID={}".format(B_BookID)
+    sql_order = "delete from order_information where B_BookID={}".format(B_BookID)
+
+    insert_or_update_data(sql_ststus) # 更新B_SaleStatus狀態
+    insert_or_update_data(sql_order) # 刪除訂單紀錄
+    print(sql_ststus)
+    print(sql_order)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
 
 # [賣家介面] 賣家評價功能
 @app.route('/do_user_information_seller_rating/<B_BookID>', methods=['POST'])
@@ -335,6 +364,7 @@ def user_information_seller_rating(B_BookID):
     print(sql)
     insert_or_update_data(sql)
     return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
+
 
 # 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
 @app.route('/user_information_orders')
@@ -395,6 +425,27 @@ def show_user_information_orders():
     print(sql_finished)
 
     return render_template("user_information_orders.html", datas_ordered = datas_ordered, datas_processing = datas_processing, datas_finished = datas_finished)
+
+# [查詢訂單] 取消按鈕 (B_SaleStatus --> '賣家已上架'，可重新被搜尋及下單)
+@app.route('/do_buyer_cancel/<B_BookID>')
+def buyer_cancel(B_BookID):
+    sql_ststus = "update book_information set B_SaleStatus='賣家已上架' where B_BookID={}".format(B_BookID)
+    sql_order = "delete from order_information where B_BookID={}".format(B_BookID)
+
+    insert_or_update_data(sql_ststus) # 更新B_SaleStatus狀態
+    insert_or_update_data(sql_order) # 刪除訂單紀錄
+    print(sql_ststus)
+    print(sql_order)
+    return redirect('/user_information_orders') # 重新導向至查詢訂單(尚未導至已下單分頁)
+
+# [查詢訂單] 完成訂單按鈕 (B_SaleStatus --> '訂單已完成')
+@app.route('/do_buyer_complete/<B_BookID>')
+def buyer_complete(B_BookID):
+    sql = "update book_information set B_SaleStatus='訂單已完成' where B_BookID={}".format(B_BookID)
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_orders') # 重新導向至查詢訂單
+
 
 # [查詢訂單] 買家評價功能
 @app.route('/do_user_information_buyer_rating/<B_BookID>', methods=['POST'])
