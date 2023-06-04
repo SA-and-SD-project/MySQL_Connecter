@@ -365,6 +365,30 @@ def user_information_seller_rating(B_BookID):
     insert_or_update_data(sql)
     return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
 
+# 暫時: 交易紀錄頁面
+@app.route('/user_information_record')
+def show_user_information_record():
+    A_BuyerID = session.get('A_StuID')
+
+    # 交易紀錄(B_SaleStatus='訂單已完成')
+    sql_finished = '''
+    select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, o.O_SalerRating, o.O_BuyerRating from book_information b, order_information o 
+    where b.B_BookID = o.B_BookID and b.B_SaleStatus='訂單已完成' and o.A_BuyerID='{}'
+    '''.format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_finished)
+        datas_finished = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_finished)
+
+    return render_template("user_information_record.html", datas_finished = datas_finished)
+
 
 # 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
 @app.route('/user_information_orders')
