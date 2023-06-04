@@ -17250,3 +17250,1258 @@ INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:02:17] "[36mGET /static/js/jquery.m
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:02:17] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:02:17] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:02:17] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:35] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:35] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:35] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "GET /static/user_information_orders_script.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:09:36] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:10:37] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:41] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:41] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:41] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:41] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:41] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:11:42] "GET /static/uploads/ds_Java.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:49] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:50] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:51] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:15:51] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:22] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:23] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:23] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:23] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:23] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:24] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "GET /user_information_profile_update/410402226 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[33mGET /static/user_information_styles.css HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:26] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:29] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [03/Jun/2023 04:18:30] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:31] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/colleagues-working-cozy-office-medium-shot.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_Remote_design_team_re_urdx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_Redesign_feedback_re_jvm0.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/businesswoman-using-tablet-analysis.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:32] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:33] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:33] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:33] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:33] "[36mGET /static/images/faq_graphic.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:33] "[36mGET /static/images/colleagues-working-cozy-office-medium-shot.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:37] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:38] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:46] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:46] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_Remote_design_team_re_urdx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/businesswoman-using-tablet-analysis.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_Redesign_feedback_re_jvm0.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/colleagues-working-cozy-office-medium-shot.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:47] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:48] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:48] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:48] "[36mGET /static/images/faq_graphic.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 19:27:52] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:21] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:22] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:22] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:01:22] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:43] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:20:44] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:15] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:15] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:15] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:21:16] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:20] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:21] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:21] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:21] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[32mGET /do_saler_check/12 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:23] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:24] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:22:24] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:34] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:34] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:34] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:34] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:34] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:35] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:51] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:52] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:52] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:58] "[32mGET /do_saler_delivered/12 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:58] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:34:59] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:01] "[32mGET /do_saler_check/12 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:01] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:01] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:01] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:01] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:02] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:03] "[32mGET /do_saler_cancel/12 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:03] "GET /user_information_sellerpage HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/user_information_sellerpage_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/uploads/EssentialReading.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:35:04] "[36mGET /static/uploads/¤U¸ü%20(1).jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "GET /user_information HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:48] "[36mGET /static/uploads/¡XPngtree¡Xhand-painted%20ink%20animal%20-%20penguin_4069434.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:45:51] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:20] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:50:21] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[32mGET /do_buyer_cancel/14 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:28] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:29] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:29] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:29] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:29] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:46] "[32mGET /do_buyer_complete/16 HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "GET /user_information_orders HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/user_information_orders_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/uploads/¸ê°TºÞ²z.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 20:51:47] "[36mGET /static/uploads/ds_Java.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/images/businesswoman-using-tablet-analysis.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/images/topics/undraw_Remote_design_team_re_urdx.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:10] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Redesign_feedback_re_jvm0.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/colleagues-working-cozy-office-medium-shot.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/faq_graphic.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:11] "[36mGET /static/images/colleagues-working-cozy-office-medium-shot.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "GET /do_book_search?search_str=java HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:18] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:22] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:23] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:23] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:23] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:25] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:26] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:27] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:27] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:27] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:27] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:28] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:29] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:45:35] "POST /order HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:07] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:07] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:07] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:07] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:07] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:08] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:09] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:09] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:25] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:25] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:26] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:27] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:28] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:37] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:38] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:38] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:38] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:53] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:53] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:53] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:53] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:53] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:52:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:17] "[35m[1mPOST /order HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:17] "GET /order?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:17] "GET /order?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:18] "GET /order?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:18] "[36mGET /order?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:44] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:44] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:44] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:44] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:44] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:45] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:46] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:52] "[35m[1mPOST /order HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:52] "[36mGET /order?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:52] "[36mGET /order?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:53:52] "[36mGET /order?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:52] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:53] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:54] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:55] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:55] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:55] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:55] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:55:55] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:01] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:01] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:02] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 22:56:03] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:24] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:24] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:24] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:24] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:24] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:25] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:26] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:26] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:32] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:32] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:33] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:34] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:37] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:39] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:40] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:41] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:07:42] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:53] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:09:54] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:00] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:00] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:01] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:02] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:02] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:02] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:10:02] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:20] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:23] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:24] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:31] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:31] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:32] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:18:33] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:00] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:00] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:00] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:00] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:01] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:02] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:08] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:08] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:09] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:10] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:10] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:10] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:10] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:10] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:10] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:20] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:20] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:20] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:20] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:20] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:21] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:58] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:58] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:58] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:19:59] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:20:00] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:25:57] "[35m[1mGET /book_detail/14 HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:25:58] "GET /book_detail/14?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:25:58] "GET /book_detail/14?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:25:58] "GET /book_detail/14?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:25:58] "[36mGET /book_detail/14?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:27] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:27] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:28] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:29] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:48] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:48] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[35m[1mGET /book_detail/comments HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:49] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[36mGET /book_detail/comments?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:27:50] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:38] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:31:39] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:00] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:00] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:01] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:02] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:02] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:02] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:12] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:12] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:12] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:13] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:14] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:14] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:32:14] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:29] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:30] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:30] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:30] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:30] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:30] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:31] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:39] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:39] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:39] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:39] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:39] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:39] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:40] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:47] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:48] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:48] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:33:48] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:49] "[36mGET /static/fonts/bootstrap-icons.woff2?8d200481aa7f02a2d63a331fc782cfaf HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:50] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:50] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:50] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:50] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:53] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:37:54] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:01] "[32mPOST /order HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:01] "GET /book_detail/14 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:01] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:01] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:01] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:01] "[36mGET /static/book_detail_script.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/uploads/GearUp.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_online_ad_re_ol62.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_viral_tweet_gndb.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_Finance_re_gnv2.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_Group_video_re_btu7.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[33mGET /static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_Compose_music_re_wpiw.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_happy_music_g6wc.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_Podcast_audience_re_4i5q.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_Graduation_re_gthn.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:02] "[36mGET /static/images/topics/undraw_Educator_re_ju47.png HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:10] "GET /do_book_search?search_str=author HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:10] "[36mGET /static/css/bootstrap.min.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[36mGET /static/css/bootstrap-icons.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[36mGET /static/js/jquery.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[36mGET /static/css/templatemo-topic-listing.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[36mGET /static/js/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[36mGET /static/js/jquery.sticky.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[36mGET /static/js/custom.js HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[33mGET /static/uploads/IMG_0589.PNG HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [04/Jun/2023 23:38:11] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392

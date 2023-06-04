@@ -693,7 +693,14 @@ def order_book():
     
     send_email_Buyer(A_Email_Buyer,A_BuyerID,B_BookName,O_LockerID)
     send_email_Saler(A_Email_Saler,B_SalerID,B_BookName,O_LockerID)
-    return 'Order Placed Successfully'
+
+    # [查看書籍詳細資訊] 購買按鈕 (B_SaleStatus --> '買家已下單')
+    sql_status = "update book_information set B_SaleStatus='買家已下單' where B_BookID={}".format(B_BookID)
+    print(sql_status)
+    insert_or_update_data(sql_status)
+
+#    return 'Order Placed Successfully'
+    return redirect('/book_detail/{}'.format(B_BookID)) # 重新導向至書籍詳細資訊
 
 #測試comments的功能用
 @app.route('/comments')
