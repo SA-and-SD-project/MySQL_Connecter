@@ -598,11 +598,11 @@ def show_book_search(search_str):
 # [查看書籍詳細資訊] 顯示網站
 @app.route('/book_detail/<B_BookID>')
 def show_book_detail(B_BookID):
-    sql = "select * from book_information where B_BookID=" + B_BookID
+    sql_book = "select * from book_information where B_BookID={}".format(B_BookID)
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql)
+        cursor.execute(sql_book)
         datas = cursor.fetchall()
         if datas:  # check if datas is not empty
             book = datas[0]
@@ -611,8 +611,55 @@ def show_book_detail(B_BookID):
             book = None  # or handle this case appropriately
     finally:
         conn.close()
-    print(sql)
-    return render_template("book_detail.html", book = book)
+    print(sql_book)
+
+    B_SalerID = session['B_SalerID']
+    sql_saler = "select * from account_manage where A_StuID='{}'".format(B_SalerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_saler)
+        saler = cursor.fetchall()[0]
+    finally:
+        conn.close()
+    print(sql_saler)
+
+    # comments未完成
+    """
+    sql_comments = "select * from comments where B_BookID={}".format(B_BookID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_comments)
+        datas = cursor.fetchall()
+        if datas:  # check if datas is not empty
+            comment = datas[0]
+#            session['B_SalerID'] = book['B_SalerID']  # store B_SalerID in the session
+        else:
+            comment = None  # or handle this case appropriately
+    finally:
+        conn.close()
+    print(sql_comments)
+    """
+
+    return render_template("book_detail.html", book = book, saler = saler)
+
+# comments未完成
+"""
+@app.route('/do_add_comment', methods=['POST'])
+def do_add_comment():
+
+    print(request.form)
+    A_StuID = session['A_StuID']
+#    B_BookID = session['B_BookID']
+    C_CommentText = request.form.get("C_CommentText")
+    sql = f'''
+    insert into comments(A_StuID, C_CommentText)
+    values('{A_StuID}', '{C_CommentText}')
+    '''
+#    return redirect('/comments')
+    return 'success!'
+"""
 
 #定義寄信功能的function
 def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):

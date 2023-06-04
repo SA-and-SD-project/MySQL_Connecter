@@ -164,40 +164,36 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="accordion-body">
-                                            <h4 id="book-status"></h4>
-                                        </div>
-                                        
-                                        <script>
-                                            var n = {
-                                                {
-                                                    book['B_BookStatus']
-                                                }
-                                            };
-                                            var bookStatusElement = document.getElementById("book-status");
-                                            if (n == 1) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
-                                            } else if (n == 2) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
-                                            } else if (n == 3) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
-                                            } else if (n == 4) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
-                                            } else if (n == 5) {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
-                                            } else {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
-                                            }
-                                        </script>
+                                            <a id="book-status"></a>
                                     </button>
                                 </h2>
+
+                                    <script>
+                                        var n = {{ book['B_BookStatus'] }};
+                                        var bookStatusElement = document.getElementById("book-status");
+                                        if (n == 1) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
+                                        } else if (n == 2) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
+                                        } else if (n == 3) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
+                                        } else if (n == 4) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
+                                        } else if (n == 5) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
+                                        } else {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
+                                        }
+                                    </script>
+                                    
+                                
 
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>此二手書本被翻閱過的頁數，(以每本書的總頁數做百分比計算):</strong>
-                                        以100頁的書本為例，全使用過可能為75頁以上都被翻閱過，書況有可能不佳，50%未翻閱可能已經被翻閱了55~45頁左右，
-                                        90%未翻閱過，其受損程度可能就極其微小。
+                                        <strong>此二手書本被翻閱過的頁數，(以每本書的總頁數做百分比計算)：</strong><br>
+                                        以100頁的書本為例，<br>全使用過可能為75頁以上都被翻閱過，可能較有使用痕跡；<br>
+                                        50%未翻閱可能已經被翻閱了55~45頁左右；<br>90%未翻閱過，其受損程度可能就極其微小。
                                     </div>
                                 </div>
                             </div>
@@ -213,8 +209,9 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>販賣者想讓您額外得知的訊息:</strong> 可能是提供您更多書籍的書況資訊，或是其他有吸引力的條件
-                                        如:書中有精美筆記、有教授額外提醒的重點劃記...等等
+                                        <strong>販賣者想讓您額外得知的訊息：</strong><br>
+                                        可能是提供您更多書籍的書況資訊，或是其他有吸引力的條件，<br>
+                                        如：書中有精美筆記、有教授額外提醒的重點劃記......
                                     </div>
                                 </div>
                             </div>
@@ -358,6 +355,31 @@
                             <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel"
                                 aria-labelledby="finance-tab" tabindex="0">
                                 <!--關於賣家-->
+
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <h4 class="mb-0">賣家基本資料</h4>
+                                        <h5><img src="../static/uploads/{{ saler['A_image'] }}"
+                                            class="custom-block-image img-fluid" alt=""></h5>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <h4 class="mb-0">暱稱：{{ saler['A_Nickname'] }}</h4>
+                                        <br>
+                                        <br>
+                                        <h5>學號：{{ saler['A_StuID'] }}</h5>
+
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <h4 class="mb-0">交易筆數：{{ saler['A_TradeCount'] }}</h4>
+                                        <br>
+                                        <br>
+                                        <h5>違規次數：</h5>
+                                    </div>
+                                </div>
+
+
 
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
