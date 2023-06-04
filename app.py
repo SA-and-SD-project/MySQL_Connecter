@@ -250,8 +250,29 @@ def user_information_profile_update():
 def show_user_information_sellerpage():
     B_SalerID = session.get('A_StuID')
 
-    # 架上書籍(B_SaleStatus!='已完成')
-    sql_processing = "select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information where B_SaleStatus!='已完成' and B_SalerID='{}'".format(B_SalerID)
+    # 已上架(B_SaleStatus='賣家已上架')
+    sql_uploaded = '''
+    select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information 
+    where B_SalerID='{}' and B_SaleStatus='賣家已上架'
+    '''.format(B_SalerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_uploaded)
+        datas_uploaded = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_uploaded)
+
+    # 進行中(B_SaleStatus='買家已下單' or '賣家已確認' or '賣家已出貨')
+    sql_processing = '''
+    select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information 
+    where B_SalerID='{}' 
+    and (B_SaleStatus='買家已下單' or B_SaleStatus='賣家已確認' or B_SaleStatus='賣家已出貨')
+    '''.format(B_SalerID)
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -264,8 +285,11 @@ def show_user_information_sellerpage():
         conn.close()
     print(sql_processing)
 
-    # 已完成(B_SaleStatus='已完成')
-    sql_finished = "select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, o.O_SalerRating, o.O_BuyerRating from book_information b, order_information o where b.B_BookID=o.B_BookID and B_SaleStatus='已完成' and b.B_SalerID='{}'".format(B_SalerID)
+    # 已完成(B_SaleStatus='訂單已完成')
+    sql_finished = '''
+    select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, o.O_SalerRating, o.O_BuyerRating from book_information b, order_information o 
+    where b.B_SalerID='{}' and b.B_BookID=o.B_BookID and B_SaleStatus='訂單已完成'
+    '''.format(B_SalerID)
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -278,41 +302,26 @@ def show_user_information_sellerpage():
         conn.close()
     print(sql_finished)
 
-    return render_template("user_information_sellerpage.html", datas_processing = datas_processing, datas_finished = datas_finished)
+    return render_template("user_information_sellerpage.html", datas_uploaded = datas_uploaded, datas_processing = datas_processing, datas_finished = datas_finished)
 
-# 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
-@app.route('/user_information_orders')
-def show_user_information_orders():
-    A_BuyerID = session.get('A_StuID')
+# [賣家介面] 下架書籍
+@app.route('/book_delete/<B_BookID>')
+def book_delete(B_BookID):
+    sql_disable_fk_check = "SET FOREIGN_KEY_CHECKS=0;"
+    sql_delete_book = "DELETE FROM book_information WHERE B_BookID='{}';".format(B_BookID)
+    sql_enable_fk_check = "SET FOREIGN_KEY_CHECKS=1;"
+    
+    # "ALTER TABLE" 刪除order_information表中的外部關鍵字約束
+    sql_alter_fk_constraint = "ALTER TABLE order_information DROP FOREIGN KEY order_information_ibfk_3;"
+    
+    insert_or_update_data(sql_disable_fk_check)
+    insert_or_update_data(sql_alter_fk_constraint)
+    insert_or_update_data(sql_delete_book)
+    insert_or_update_data(sql_enable_fk_check)
+    print(sql_alter_fk_constraint)
+    print(sql_delete_book)
 
-    # 架上書籍(B_SaleStatus!='已完成')
-    sql_processing = "select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus from book_information b, order_information o where b.B_BookID = o.B_BookID and b.B_SaleStatus!='已完成' and o.A_BuyerID='{}'".format(A_BuyerID)
-    conn = get_conn()
-    try:
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql_processing)
-        datas_processing = cursor.fetchall()
-    except Exception as e:
-        logging.exception("Error occurred during user_information_sellerpage")
-        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
-    finally:
-        conn.close()
-    print(sql_processing)
-
-    # 已完成(B_SaleStatus='已完成')
-    sql_finished = "select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, o.O_SalerRating, o.O_BuyerRating from book_information b, order_information o where b.B_BookID = o.B_BookID and b.B_SaleStatus='已完成' and o.A_BuyerID='{}'".format(A_BuyerID)
-    conn = get_conn()
-    try:
-        cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql_finished)
-        datas_finished = cursor.fetchall()
-    except Exception as e:
-        logging.exception("Error occurred during user_information_sellerpage")
-        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
-    finally:
-        conn.close()
-    print(sql_finished)
-    return render_template("user_information_orders.html", datas_processing = datas_processing, datas_finished = datas_finished)
+    return redirect('/user_information_sellerpage') #重新導向(尚未導至已上架分頁)
 
 # [賣家介面] 賣家評價功能
 @app.route('/do_user_information_seller_rating/<B_BookID>', methods=['POST'])
@@ -325,7 +334,67 @@ def user_information_seller_rating(B_BookID):
     '''
     print(sql)
     insert_or_update_data(sql)
-    return redirect(url_for('show_user_information_sellerpage'))
+    return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
+
+# 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
+@app.route('/user_information_orders')
+def show_user_information_orders():
+    A_BuyerID = session.get('A_StuID')
+
+    # 已下單(B_SaleStatus='買家已下單' or '賣家已確認')
+    sql_ordered = '''
+    select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus from book_information b, order_information o 
+    where b.B_BookID = o.B_BookID and o.A_BuyerID='{}' 
+    and (b.B_SaleStatus='買家已下單' or b.B_SaleStatus='賣家已確認')
+    '''.format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_ordered)
+        datas_ordered = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_ordered)
+
+    # 進行中(B_SaleStatus='賣家已出貨')
+    sql_processing = '''
+    select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus from book_information b, order_information o 
+    where b.B_BookID = o.B_BookID and o.A_BuyerID='{}' 
+    and b.B_SaleStatus='賣家已出貨'
+    '''.format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_processing)
+        datas_processing = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_processing)
+
+    # 已完成(B_SaleStatus='訂單已完成')
+    sql_finished = '''
+    select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, o.O_SalerRating, o.O_BuyerRating from book_information b, order_information o 
+    where b.B_BookID = o.B_BookID and b.B_SaleStatus='訂單已完成' and o.A_BuyerID='{}'
+    '''.format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_finished)
+        datas_finished = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_finished)
+
+    return render_template("user_information_orders.html", datas_ordered = datas_ordered, datas_processing = datas_processing, datas_finished = datas_finished)
 
 # [查詢訂單] 買家評價功能
 @app.route('/do_user_information_buyer_rating/<B_BookID>', methods=['POST'])
@@ -338,7 +407,7 @@ def user_information_buyer_rating(B_BookID):
     '''
     print(sql)
     insert_or_update_data(sql)
-    return redirect(url_for('show_user_information_orders'))
+    return redirect('/user_information_orders?tab=finished') #重新導向至已完成分頁
 
 # [上架] 顯示網站
 @app.route('/book_create')
@@ -457,10 +526,12 @@ def book_search():
 @app.route('/book_search/<search_str>')
 def show_book_search(search_str):
     # 搜索欄位: 書名、作者、科系、課程、老師
+    # 僅篩選狀態為'賣家已上架'的書籍
     sql = f'''select B_BookID, B_BookName, B_BookPic, B_Price from book_information where 
-    (B_BookName like '%{search_str}%') or (B_Author like '%{search_str}%') 
-    or (B_BookMajor like '%{search_str}%') or (B_LessonName like '%{search_str}%') 
-    or (B_UsedByTeacher like '%{search_str}%')'''
+    ((B_BookName like '%{search_str}%') or (B_Author like '%{search_str}%') or (B_BookMajor like '%{search_str}%') 
+    or (B_LessonName like '%{search_str}%') or (B_UsedByTeacher like '%{search_str}%'))
+    and B_SaleStatus='賣家已上架'
+    '''
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
