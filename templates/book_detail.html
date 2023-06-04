@@ -148,7 +148,8 @@
                     <div class="clearfix">
                         <form method="POST" action="/order">
                             <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
-                            <button type="submit" class="btn custom-btn mt-3 mt-lg-4">
+                            <button type="submit" class="btn custom-btn mt-3 mt-lg-4" 
+                                {% if book['B_SaleStatus'] != '賣家已上架' %} disabled {% endif %}>
                                 購買(沒有防呆)
                             </button>
                         </form>

@@ -269,15 +269,15 @@ https://templatemo.com/tm-590-topic-listing
 
                                                 <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
 
-                                                <button class="button modify"
+                                                <button class="button modify" {% if book['B_SaleStatus'] != '賣家已確認' %} disabled {% endif %}
                                                     onclick="location.href='/do_saler_delivered/{{ book['B_BookID'] }}'">
                                                     我已出貨
                                                 </button>
-                                                <button class="button modify"
+                                                <button class="button modify" {% if book['B_SaleStatus'] != '買家已下單' %} disabled {% endif %}
                                                     onclick="location.href='/do_saler_check/{{ book['B_BookID'] }}'">
                                                     確認
                                                 </button>
-                                                <button class="button remove"
+                                                <button class="button remove" {% if book['B_SaleStatus'] != '買家已下單' %} disabled {% endif %}
                                                     onclick="location.href='/do_saler_cancel/{{ book['B_BookID'] }}'">
                                                     取消
                                                 </button>
