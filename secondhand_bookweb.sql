@@ -98,7 +98,8 @@ INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, 
 (15, 'test3', '64555555', 'author', '3', '中國文學系', '英文', 'EssentialReading.jpg', 4, '~說明文字~\r\n                        ', '', '~說明文字~\r\n                        ', 300, '410402226', '賣家已出貨'),
 (16, 'test4', '88844656', 'author', '4.2', '圖書資訊學系', '資訊管理', '資訊管理.jpg', 4, '~說明文字~\r\n                        ', '', '~說明文字~\r\n                        ', 350, 'test1', '訂單已完成'),
 (19, 'test17', '585641964', 'author', '1.7', '哲學系', '國文', '下載 (3).jpg', 2, '鉛筆', '', '無', 320, '410402226', '訂單已完成'),
-(20, 'test2020', '7727824728', 'author20', '2', '圖書資訊學系', '國文', 'test2.jpg', 3, '原子筆', '', '--', 350, '410402226', '訂單已完成');
+(20, 'test2020', '7727824728', 'author20', '2', '圖書資訊學系', '國文', 'test2.jpg', 3, '原子筆', '', '--', 350, '410402226', '訂單已完成'),
+(21, '資料結構使用Python', '97898650287', '蔡明志', '2', '資訊管理學系', '資料結構', 'ds_python.jpg', 4, '鉛筆、螢光筆筆跡', '', '學姊送的，但我的課本不是用這本，算很新的三手書', 250, '410402226', '賣家已上架');
 
 -- --------------------------------------------------------
 
@@ -189,7 +190,7 @@ ALTER TABLE `order_information`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `book_information`
 --
 ALTER TABLE `book_information`
-  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `comments`
