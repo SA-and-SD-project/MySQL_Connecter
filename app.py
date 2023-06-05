@@ -288,7 +288,8 @@ def show_user_information_sellerpage():
     select o.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, 
     o.A_BuyerID, a.A_Nickname, a.A_CreditPoint, a.A_TradeCount, a.A_ViolationCount
     from book_information b, order_information o, account_manage a 
-    where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID and o.B_SalerID='{}'
+    where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID 
+    and o.B_SalerID='{}' and b.B_SaleStatus in ('買家已下單', '賣家已確認', '賣家已出貨')
     '''.format(B_SalerID)
     conn = get_conn()
     try:
