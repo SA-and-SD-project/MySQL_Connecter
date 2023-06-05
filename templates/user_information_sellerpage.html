@@ -403,17 +403,30 @@ https://templatemo.com/tm-590-topic-listing
                                             <div>
                                                 <h4 class="mb-2">書名：{{ book['B_BookName'] }}</h4>
 
-                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
+                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
 
-                                                <button class="button modify">
+                                                <button class="button modify" {% if book['B_SaleStatus'] != '賣家已確認' %} disabled {% endif %}
+                                                    onclick="location.href='/do_saler_delivered/{{ book['B_BookID'] }}'">
                                                     我已出貨
                                                 </button>
-                                                <button class="button modify">
+                                                <button class="button modify" {% if book['B_SaleStatus'] != '買家已下單' %} disabled {% endif %}
+                                                    onclick="location.href='/do_saler_check/{{ book['B_BookID'] }}'">
                                                     確認
                                                 </button>
-                                                <button class="button remove">
+                                                <button class="button remove" {% if book['B_SaleStatus'] != '買家已下單' %} disabled {% endif %}
+                                                    onclick="location.href='/do_saler_cancel/{{ book['B_BookID'] }}'">
                                                     取消
                                                 </button>
+                                            </div>
+                                            <div>
+                                                <p>買家資訊--&nbsp;&nbsp;</P>
+                                            </div>
+                                            <div>
+                                                <p>學號：{{ book['A_BuyerID'] }}</p>
+                                                <p>暱稱：{{ book['A_Nickname'] }}</p>
+                                                <p>信用積分：{{ book['A_CreditPoint'] }}</p>
+                                                <p>交易筆數：{{ book['A_TradeCount'] }}</p>
+                                                <p>違規次數：</p>          
                                             </div>
                                         </div>
                                     </div>
@@ -446,45 +459,13 @@ https://templatemo.com/tm-590-topic-listing
                                                     <li value="4">☆</li>
                                                     <li value="5">☆</li>
                                                 </ul>
-                                                <!--這邊的觸發要刪掉改成彈窗的觸發-->
-                                                <form action="/do_user_information_seller_rating/{{ book['B_BookID'] }}"
-                                                    method="POST">
-                                                    <ul class="comment-2">
-                                                        <li value="1">☆</li>
-                                                        <li value="2">☆</li>
-                                                        <li value="3">☆</li>
-                                                        <li value="4">☆</li>
-                                                        <li value="5">☆</li>
-                                                    </ul>
-                                                    
-                                                </form>
-                                                
-                                            </div>
-                                            <button id="editBtn" onclick="toggleEditMode()">評價</button>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
+                                                <input type="hidden" name="O_SalerRating" id="ratingValueInput" value="{{ book['O_SalerRating'] }}">
 
-                            <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel"
-                                aria-labelledby="finance-tab" tabindex="0">
-                                <div class="row">
-                                    <!--書籍篩選: 已上架-->
-                                    {% for book in datas_uploaded %}
-                                    <div class="d-flex">
-                                        <div class="col-lg-2 col-4 mt-3 mx-10">
-                                            <img src="../static/uploads/{{ book['B_BookPic'] }}"
-                                                class="custom-block-image img-fluid" alt="Image">
-                                        </div>
-                                        <div class="custom-block-topics-listing-info d-flex">
-                                            <div>
-                                                <h4 class="mb-2">書名：{{ book['B_BookName'] }}</h4>
-                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
-                                            </div>
-                                            <button class="button modify"
-                                                onclick="location.href='/book_update/{{ book['B_BookID'] }}'">修改</button>
-                                            <button class="button remove">下架</button>
+                                                <button id="editBtn" type="submit" name="submit"
+                                                    {% if book['O_SalerRating'] != 0 %} disabled {% endif %}>
+                                                評價
+                                            </button>
+                                            </form>
                                         </div>
                                     </div>
                                     {% endfor %}

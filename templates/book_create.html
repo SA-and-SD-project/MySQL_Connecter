@@ -136,39 +136,39 @@
                         </nav>
                         <h2 class="text-white">上架書籍</h2>
                         <br>
-                        <h4 class="text-white">書本基本資訊</h4>
+                        <h4 class="text-white">書本基本資訊<font color="red">*</font></h4>
                         <form action="/do_book_create" method="POST" enctype="multipart/form-data">
                             <div class="form-floating">
                                 <input type="text" name="B_BookName" class="form-control" placeholder="Name">
 
-                                <label for="floatingInput">書名</label>
+                                <label for="floatingInput">書名<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_BookVersion" class="form-control" placeholder="Name">
 
-                                <label for="floatingInput">版本</label>
+                                <label for="floatingInput">版本<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_ISBN" class="form-control" placeholder="Name"
                                     required="required">
 
-                                <label for="floatingInput">ISBN碼</label>
+                                <label for="floatingInput">ISBN碼<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_Author" class="form-control" placeholder="Name"
                                     required="required">
 
-                                <label for="floatingInput">作者</label>
+                                <label for="floatingInput">作者<font color="red">*</font></label>
                             </div>
                             <br>
                             <h4 class="text-white">二手狀態調查</h4>
                             <div class="form-floating">
                                 <label for="floatingInput"></label>
                                 <select name="B_BookStatus" required>
-                                    <option>請選擇翻閱情況</option>
+                                    <option>請選擇翻閱情況<font color="red">*</font></option>
                                     <option value=1>全使用過</option>
                                     <option value=2>25%未翻閱</option>
                                     <option value=3>50%未翻閱</option>
@@ -178,26 +178,24 @@
                             </div>
                             <br>
                             <div class="form-floating">
-                                <h5 class="text-white">使用痕跡、筆跡、汙損敘述</h5>
-
+                                <h5 class="text-white">使用痕跡、筆跡、汙損敘述<font color="red">*</font></h5>
                                 <textarea class="form-control" id="message" name="B_UsedStatus"
-                                    placeholder="Tell me about the project">~說明文字~</textarea>
-
-                                <label for="floatingTextarea"></label>
+                                    placeholder="Tell me about the project"></textarea>
+                                <label for="floatingTextarea"><br><br>例如：是否有鉛筆/原子筆/螢光筆筆跡、是否有水漬......</label>
+                                
                             </div>
                             <br>
                             <div class="form-floating">
                                 <h5 class="text-white">補充資訊</h5>
 
                                 <textarea class="form-control" id="message" name="B_Extra_Info"
-                                    placeholder="Tell me about the project">~說明文字~</textarea>
-
-                                <label for="floatingTextarea"></label>
+                                    placeholder="Tell me about the project"></textarea>
+                                    <label for="floatingTextarea"><br><br></label>
                             </div>
                             <br>
 
                             <div class="form-floating">
-                                <h5 class="text-white">書況照片</h5>
+                                <h5 class="text-white">書況照片<font color="red">*</font></h5>
                                 <input type="file" name="B_BookPic" accept="image/*" required>
                                 <input type="submit" value="上傳">
                                 <input type="reset" value="重新上傳">
@@ -208,7 +206,7 @@
                             <div class="form-floating">
                                 <label for="floatingInput"></label>
                                 <select name="B_BookMajor">
-                                    <option value="">請選擇您使用此書時的科系</option>
+                                    <option value="">請選擇您使用此書時的科系<font color="red">*</font></option>
                                     <optgroup label="文學院">
                                         <option value="中國文學系">中國文學系</option>
                                         <option value="歷史學系">歷史學系</option>
@@ -301,7 +299,7 @@
                                 <input type="text" name="B_LessonName" class="form-control" placeholder="Name"
                                     required="required">
 
-                                <label for="floatingInput">課程名稱</label>
+                                <label for="floatingInput">課程名稱<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
@@ -310,12 +308,12 @@
                                 <label for="floatingInput">授課老師</label>
                             </div>
                             <br>
-                            <h4 class="text-white">定價</h4>
+                            <h4 class="text-white">定價<font color="red">*</font></h4>
                             <div class="form-floating">
                                 <input type="number" name="B_Price" class="form-control" placeholder="Name"
                                     required="required">
 
-                                <label for="floatingInput">售價</label>
+                                <label for="floatingInput">售價<font color="red">*</font></label>
                             </div>
                             <br>
                             <input type="submit" name="submit" value="提交">

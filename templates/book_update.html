@@ -139,7 +139,7 @@
                         </nav>
                         <h2 class="text-white">修改書籍</h2>
                         <br>
-                        <h4 class="text-white">書本基本資訊</h4>
+                        <h4 class="text-white">書本基本資訊<font color="red">*</font></h4>
                         <br>
                         <form action="/do_book_update" method="POST" enctype="multipart/form-data">
                             <div class="form-floating">
@@ -152,28 +152,28 @@
                                 <input type="text" name="B_BookName" class="form-control" placeholder="Name"
                                     value="{{ book[ 'B_BookName' ]}}" required="required">
 
-                                <label for="floatingInput">書名</label>
+                                <label for="floatingInput">書名<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_BookVersion" class="form-control" placeholder="Name"
                                     value="{{ book[ 'B_BookVersion' ]}}" required>
 
-                                <label for="floatingInput">版本</label>
+                                <label for="floatingInput">版本<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_ISBN" class="form-control" placeholder="Name"
                                     value="{{ book[ 'B_ISBN' ]}}" required="required">
 
-                                <label for="floatingInput">ISBN碼</label>
+                                <label for="floatingInput">ISBN碼<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_Author" class="form-control" placeholder="Name"
                                     value="{{ book[ 'B_Author' ]}}" required="required">
 
-                                <label for="floatingInput">作者</label>
+                                <label for="floatingInput">作者<font color="red">*</font></label>
                             </div>
                             <br>
                             <h4 class="text-white">二手狀態調查</h4>
@@ -181,7 +181,7 @@
                             <div class="form-floating">
                                 <label for="floatingInput"></label>
                                 <select name="B_BookStatus">
-                                    <option value="{{ book[ 'B_BookStatus' ]}}" required>請選擇翻閱情況</option>
+                                    <option value="{{ book[ 'B_BookStatus' ] }}" id="book-status" required></option>
                                     <option value=1>全使用過</option>
                                     <option value=2>25%未翻閱</option>
                                     <option value=3>50%未翻閱</option>
@@ -189,9 +189,28 @@
                                     <option value=5>90%以上未翻閱</option>
                                 </select>
                             </div>
+
+                            <script>
+                                var n = {{ book['B_BookStatus'] }};
+                                var bookStatusElement = document.getElementById("book-status");
+                                if (n == 1) {
+                                    bookStatusElement.innerHTML = "全使用過";
+                                } else if (n == 2) {
+                                    bookStatusElement.innerHTML = "25%未翻閱";
+                                } else if (n == 3) {
+                                    bookStatusElement.innerHTML = "50%未翻閱";
+                                } else if (n == 4) {
+                                    bookStatusElement.innerHTML = "75%未翻閱";
+                                } else if (n == 5) {
+                                    bookStatusElement.innerHTML = "90%以上未翻閱";
+                                } else {
+                                    bookStatusElement.innerHTML = "未顯示";
+                                }
+                            </script>
+
                             <br>
                             <div class="form-floating">
-                                <h5 class="text-white">使用痕跡、筆跡、汙損敘述</h5>
+                                <h5 class="text-white">使用痕跡、筆跡、汙損敘述<font color="red">*</font></h5>
 
                                 <textarea class="form-control" id="message" name="B_UsedStatus"
                                     placeholder="Tell me about the project">{{ book[ 'B_UsedStatus' ]}}</textarea>
@@ -313,22 +332,22 @@
                                 <input type="text" name="B_LessonName" class="form-control" placeholder="Name"
                                     value="{{ book[ 'B_LessonName' ]}}" required="required">
 
-                                <label for="floatingInput">課程名稱</label>
+                                <label for="floatingInput">課程名稱<font color="red">*</font></label>
                             </div>
                             <br>
                             <div class="form-floating">
                                 <input type="text" name="B_UsedByTeacher" class="form-control" placeholder="Name"
-                                    value="{{ book[ 'B_UsedByTeacher' ]}}" required="required">
+                                    value="{{ book[ 'B_UsedByTeacher' ]}}" >
 
                                 <label for="floatingInput">授課老師</label>
                             </div>
                             <br>
-                            <h4 class="text-white">定價</h4>
+                            <h4 class="text-white">定價<font color="red">*</font></h4>
                             <div class="form-floating">
                                 <input type="number" name="B_Price" class="form-control" placeholder="Name"
                                     value="{{ book[ 'B_Price' ]}}" required="required">
 
-                                <label for="floatingInput">售價</label>
+                                <label for="floatingInput">售價<font color="red">*</font></label>
                             </div>
                             <br>
                             <input type="submit" name="submit" value="提交">

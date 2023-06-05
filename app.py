@@ -284,11 +284,12 @@ def show_user_information_sellerpage():
         conn.close()
     print(sql_uploaded)
 
-    # 進行中(B_SaleStatus='買家已下單' or '賣家已確認' or '賣家已出貨')
+    # 進行中(B_SaleStatus='買家已下單' or '賣家已確認' or '賣家已出貨')，包含買家資訊
     sql_processing = '''
-    select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information 
-    where B_SalerID='{}' 
-    and (B_SaleStatus='買家已下單' or B_SaleStatus='賣家已確認' or B_SaleStatus='賣家已出貨')
+    select o.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, 
+    o.A_BuyerID, a.A_Nickname, a.A_CreditPoint, a.A_TradeCount
+    from book_information b, order_information o, account_manage a 
+    where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID and o.B_SalerID='{}'
     '''.format(B_SalerID)
     conn = get_conn()
     try:
@@ -338,7 +339,36 @@ def book_delete(B_BookID):
     print(sql_alter_fk_constraint)
     print(sql_delete_book)
 
-    return redirect('/user_information_sellerpage') #重新導向(尚未導至已上架分頁)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面(尚未導至已上架分頁)
+
+# [賣家介面] 我已出貨按鈕 (B_SaleStatus --> '賣家已出貨')
+@app.route('/do_saler_delivered/<B_BookID>')
+def saler_delivered(B_BookID):
+    sql = "update book_information set B_SaleStatus='賣家已出貨' where B_BookID={}".format(B_BookID)
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
+# [賣家介面] 確認按鈕 (B_SaleStatus --> '賣家已確認')
+@app.route('/do_saler_check/<B_BookID>')
+def saler_check(B_BookID):
+    sql = "update book_information set B_SaleStatus='賣家已確認' where B_BookID={}".format(B_BookID)
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
+# [賣家介面] 取消按鈕 (B_SaleStatus --> '賣家已上架'，可重新被搜尋及下單)
+@app.route('/do_saler_cancel/<B_BookID>')
+def saler_cancel(B_BookID):
+    sql_ststus = "update book_information set B_SaleStatus='賣家已上架' where B_BookID={}".format(B_BookID)
+    sql_order = "delete from order_information where B_BookID={}".format(B_BookID)
+
+    insert_or_update_data(sql_ststus) # 更新B_SaleStatus狀態
+    insert_or_update_data(sql_order) # 刪除訂單紀錄
+    print(sql_ststus)
+    print(sql_order)
+    return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
 
 # [賣家介面] 賣家評價功能
 @app.route('/do_user_information_seller_rating/<B_BookID>', methods=['POST'])
@@ -352,6 +382,31 @@ def user_information_seller_rating(B_BookID):
     print(sql)
     insert_or_update_data(sql)
     return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
+
+# 暫時: 交易紀錄頁面
+@app.route('/user_information_record')
+def show_user_information_record():
+    A_BuyerID = session.get('A_StuID')
+
+    # 交易紀錄(B_SaleStatus='訂單已完成')
+    sql_finished = '''
+    select b.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, o.O_SalerRating, o.O_BuyerRating from book_information b, order_information o 
+    where b.B_BookID = o.B_BookID and b.B_SaleStatus='訂單已完成' and o.A_BuyerID='{}'
+    '''.format(A_BuyerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_finished)
+        datas_finished = cursor.fetchall()
+    except Exception as e:
+        logging.exception("Error occurred during user_information_sellerpage")
+        return "An error occurred during user_information_sellerpage. Please check the error log for more information.", 500
+    finally:
+        conn.close()
+    print(sql_finished)
+
+    return render_template("user_information_record.html", datas_finished = datas_finished)
+
 
 # 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
 @app.route('/user_information_orders')
@@ -412,6 +467,27 @@ def show_user_information_orders():
     print(sql_finished)
 
     return render_template("user_information_orders.html", datas_ordered = datas_ordered, datas_processing = datas_processing, datas_finished = datas_finished)
+
+# [查詢訂單] 取消按鈕 (B_SaleStatus --> '賣家已上架'，可重新被搜尋及下單)
+@app.route('/do_buyer_cancel/<B_BookID>')
+def buyer_cancel(B_BookID):
+    sql_ststus = "update book_information set B_SaleStatus='賣家已上架' where B_BookID={}".format(B_BookID)
+    sql_order = "delete from order_information where B_BookID={}".format(B_BookID)
+
+    insert_or_update_data(sql_ststus) # 更新B_SaleStatus狀態
+    insert_or_update_data(sql_order) # 刪除訂單紀錄
+    print(sql_ststus)
+    print(sql_order)
+    return redirect('/user_information_orders') # 重新導向至查詢訂單(尚未導至已下單分頁)
+
+# [查詢訂單] 完成訂單按鈕 (B_SaleStatus --> '訂單已完成')
+@app.route('/do_buyer_complete/<B_BookID>')
+def buyer_complete(B_BookID):
+    sql = "update book_information set B_SaleStatus='訂單已完成' where B_BookID={}".format(B_BookID)
+    print(sql)
+    insert_or_update_data(sql)
+    return redirect('/user_information_orders') # 重新導向至查詢訂單
+
 
 # [查詢訂單] 買家評價功能
 @app.route('/do_user_information_buyer_rating/<B_BookID>', methods=['POST'])
@@ -565,11 +641,11 @@ def show_book_search(search_str):
 # #加入comment資料表的資訊，否則iframe讀取不到
 @app.route('/book_detail/<B_BookID>')
 def show_book_detail(B_BookID):
-    sql = "select * from book_information where B_BookID=" + B_BookID
+    sql_book = "select * from book_information where B_BookID={}".format(B_BookID)
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql)
+        cursor.execute(sql_book)
         datas = cursor.fetchall()
         if datas:  # check if datas is not empty
             book = datas[0]
@@ -578,8 +654,55 @@ def show_book_detail(B_BookID):
             book = None  # or handle this case appropriately
     finally:
         conn.close()
-    print(sql)
-    return render_template("book_detail.html", book = book)
+    print(sql_book)
+
+    B_SalerID = session['B_SalerID']
+    sql_saler = "select * from account_manage where A_StuID='{}'".format(B_SalerID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_saler)
+        saler = cursor.fetchall()[0]
+    finally:
+        conn.close()
+    print(sql_saler)
+
+    # comments未完成
+    """
+    sql_comments = "select * from comments where B_BookID={}".format(B_BookID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql_comments)
+        datas = cursor.fetchall()
+        if datas:  # check if datas is not empty
+            comment = datas[0]
+#            session['B_SalerID'] = book['B_SalerID']  # store B_SalerID in the session
+        else:
+            comment = None  # or handle this case appropriately
+    finally:
+        conn.close()
+    print(sql_comments)
+    """
+
+    return render_template("book_detail.html", book = book, saler = saler)
+
+# comments未完成
+"""
+@app.route('/do_add_comment', methods=['POST'])
+def do_add_comment():
+
+    print(request.form)
+    A_StuID = session['A_StuID']
+#    B_BookID = session['B_BookID']
+    C_CommentText = request.form.get("C_CommentText")
+    sql = f'''
+    insert into comments(A_StuID, C_CommentText)
+    values('{A_StuID}', '{C_CommentText}')
+    '''
+#    return redirect('/comments')
+    return 'success!'
+"""
 
 #定義寄信功能的function
 def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
@@ -660,7 +783,14 @@ def order_book():
     
     send_email_Buyer(A_Email_Buyer,A_BuyerID,B_BookName,O_LockerID)
     send_email_Saler(A_Email_Saler,B_SalerID,B_BookName,O_LockerID)
-    return 'Order Placed Successfully'
+
+    # [查看書籍詳細資訊] 購買按鈕 (B_SaleStatus --> '買家已下單')
+    sql_status = "update book_information set B_SaleStatus='買家已下單' where B_BookID={}".format(B_BookID)
+    print(sql_status)
+    insert_or_update_data(sql_status)
+
+#    return 'Order Placed Successfully'
+    return redirect('/book_detail/{}'.format(B_BookID)) # 重新導向至書籍詳細資訊
 
 #測試comments的功能用
 @app.route('/comments')

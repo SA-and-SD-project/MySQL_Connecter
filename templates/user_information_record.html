@@ -48,6 +48,8 @@ https://templatemo.com/tm-590-topic-listing
                 <a class="navbar-brand" href="/">
                     <i class="bi-back"></i>
                     <span>FJU UBTP</span>
+                </a>
+
                 <div class="d-lg-none ms-auto me-4">
                     <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
                 </div>
@@ -118,6 +120,7 @@ https://templatemo.com/tm-590-topic-listing
                             </ul>
                         </li>
                     -->
+
                         <form action="/do_book_search" method="get" class="custom-form mb-2 pb-2 mb-lg-2 mb-3"
                             role="search">
                             <div class="input-group input-group-sm">
@@ -151,7 +154,7 @@ https://templatemo.com/tm-590-topic-listing
                                 </li>
 
                                 <li class="breadcrumb-item active" aria-current="page">
-                                    查詢訂單
+                                    交易紀錄
                                 </li>
                             </ol>
                         </nav>
@@ -167,33 +170,13 @@ https://templatemo.com/tm-590-topic-listing
             <div class="container-fluid">
                 <div class="row">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
-
+                        
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="uploaded" data-bs-toggle="tab"
-                                data-bs-target="#uploaded-tab-pane" type="button" role="tab"
-                                aria-controls="uploaded-tab-pane" aria-selected="false">已下單</button>
+                            <button class="nav-link active" id="record" data-bs-toggle="tab"
+                                data-bs-target="#record-tab-pane" type="button" role="tab"
+                                aria-controls="record-tab-pane" aria-selected="true">交易紀錄</button>
                         </li>
 
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="processing" data-bs-toggle="tab"
-                                data-bs-target="#processing-tab-pane" type="button" role="tab"
-                                aria-controls="processing-tab-pane" aria-selected="true">進行中</button>
-                        </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="finished" data-bs-toggle="tab"
-                                data-bs-target="#finished-tab-pane" type="button" role="tab"
-                                aria-controls="finished-tab-pane" aria-selected="false">已完成</button>
-                        </li>
-
-                <!--已完成訂單：評分功能-->
-                <form action="/do_user_information_buyer_rating/{{ book['B_BookID'] }}" method="POST">
-                    <ul class="comment" size="20" name="O_BuyerRating">
-                        <li value="1" onclick="setRatingValue(1)">☆</li>
-                        <li value="2" onclick="setRatingValue(2)">☆</li>
-                        <li value="3" onclick="setRatingValue(3)">☆</li>
-                        <li value="4" onclick="setRatingValue(4)">☆</li>
-                        <li value="5" onclick="setRatingValue(5)">☆</li>
                     </ul>
                 </div>
             </div>
@@ -203,62 +186,8 @@ https://templatemo.com/tm-590-topic-listing
                     <div class="col-12">
                         <div class="tab-content" id="myTabContent">
 
-                            <div class="tab-pane fade" id="uploaded-tab-pane" role="tabpanel"
-                                aria-labelledby="sell-tab" tabindex="0">
-                                <div class="row">
-                                    <!--書籍篩選: 已下單-->
-                                    {% for book in datas_ordered %}
-                                    <div class="d-flex">
-                                        <div class="col-lg-2 col-4 mt-3 mx-10">
-                                            <img src="../static/uploads/{{ book['B_BookPic'] }}"
-                                                class="custom-block-image img-fluid" alt="Image">
-                                        </div>
-                                        <div class="custom-block-topics-listing-info d-flex">
-                                            <div>
-                                                <h4 class="mb-2">書名：{{ book['B_BookName'] }}</h4>
-
-                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
-
-                                                <button class="button remove" {% if book['B_SaleStatus'] == '賣家已確認' %} disabled {% endif %}
-                                                    onclick="location.href='/do_buyer_cancel/{{ book['B_BookID'] }}'">
-                                                    取消訂單
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                        </div>
-
-                            <div class="tab-pane fade show active" id="processing-tab-pane" role="tabpanel"
+                            <div class="tab-pane fade show active" id="record-tab-pane" role="tabpanel"
                                 aria-labelledby="design-tab" tabindex="0">
-                                <div class="row">
-                                    <!--書籍篩選: 進行中-->
-                                    {% for book in datas_processing %}
-                                    <div class="d-flex">
-                                        <div class="col-lg-2 col-4 mt-3 mx-10">
-                                            <img src="../static/uploads/{{ book['B_BookPic'] }}"
-                                                class="custom-block-image img-fluid" alt="Image">
-                                        </div>
-                                        <div class="custom-block-topics-listing-info d-flex">
-                                            <div>
-                                                <h4 class="mb-2">書名：{{ book['B_BookName'] }}</h4>
-
-                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
-
-                                                <button class="button modify" {% if book['B_SaleStatus'] != '賣家已出貨' %} disabled {% endif %}
-                                                    onclick="location.href='/do_buyer_complete/{{ book['B_BookID'] }}'">
-                                                    完成訂單
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="finished-tab-pane" role="tabpanel"
-                                aria-labelledby="marketing-tab" tabindex="0">
                                 <div class="row">
                                     <!--書籍篩選: 已完成-->
                                     {% for book in datas_finished %}
@@ -284,23 +213,13 @@ https://templatemo.com/tm-590-topic-listing
                                                 </ul>
                                                 <input type="hidden" name="O_BuyerRating" id="ratingValueInput" value="{{ book['O_BuyerRating'] }}">
 
-                                                <button id="editBtn" type="submit" name="submit"
-                                                    {% if book['O_BuyerRating'] != 0 %} disabled {% endif %}>
-                                                評價
-                                            </button>
+                                                <button id="editBtn" type="submit" name="submit">評價</button>
                                             </form>
                                         </div>
                                     </div>
                                     {% endfor %}
                                 </div>
                             </div>
-                    <input type="hidden" name="O_BuyerRating" id="ratingValueInput" value="{{ book['O_BuyerRating'] }}">
-                    
-                    <button id="editBtn" type="submit" name="submit">評價</button>
-                </form>
-            </div>
-            {% endfor %}
-
                         </div>
                     </div>
                 </div>
@@ -370,15 +289,6 @@ https://templatemo.com/tm-590-topic-listing
                         <!--沒有登入-->
                         {% endif %}
 
-    <script>
-        //儲存評分的值
-        function setRatingValue(value) {
-            document.getElementById("ratingValueInput").value = value;
-        }
-    </script>
-
-
-
 
 
                     </ul>
@@ -411,7 +321,6 @@ https://templatemo.com/tm-590-topic-listing
         </div>
     </footer>
 
-    <!--trying:交易紀錄導至查詢訂單之已完成分頁
     <script>
         $(document).ready(function () {
             // 解析URL中的參數值
@@ -425,7 +334,7 @@ https://templatemo.com/tm-590-topic-listing
         });
         
     </script>
-    -->
+
     <!-- JAVASCRIPT FILES -->
     <script src="../static/js/jquery.min.js"></script>
     <script src="../static/js/bootstrap.bundle.min.js"></script>
