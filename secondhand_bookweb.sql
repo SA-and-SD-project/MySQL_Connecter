@@ -32,7 +32,6 @@ CREATE TABLE `account_manage` (
   `A_Email` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_Password` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_StuID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_RealNameVerify` tinyint(1) DEFAULT NULL,
   `A_BirthDate` date DEFAULT NULL,
   `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `A_Nickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'User',
@@ -46,12 +45,12 @@ CREATE TABLE `account_manage` (
 -- 傾印資料表的資料 `account_manage`
 --
 
-INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`, `A_ViolationCount`, `A_image`) VALUES
-('linglingling7777777@gmail.com', '1234', '111', 1, '2023-01-12', '企業管理學系', 'User', 5, 0, 0, ''),
-('cherry911219@gmail.com', '1111', '410402226', 0, '2002-12-19', '資訊管理學系', '奇怪的知識增加了了了', 5, 0, 0, '—Pngtree—hand-painted ink animal - penguin_4069434.png'),
-('shioubi0216@gmail.com', '123inok', '410402407', 0, '2023-01-19', '經濟學系、所', 'User', 5, 0, 0, 'profile_preset.jpg'),
-('wsx2244667@gmail.com', '12345678', '410402408', 0, '2023-05-09', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg'),
-('linglingling7777777@gmail.com', 'test1', 'test1', 0, '2001-01-11', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg');
+INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`, `A_ViolationCount`, `A_image`) VALUES
+('linglingling7777777@gmail.com', '1234', '111', '2023-01-12', '企業管理學系', 'User', 5, 0, 0, ''),
+('cherry911219@gmail.com', '1111', '410402226', '2002-12-19', '資訊管理學系', '奇怪的知識增加了了了', 5, 0, 0, '—Pngtree—hand-painted ink animal - penguin_4069434.png'),
+('shioubi0216@gmail.com', '123inok', '410402407', '2023-01-19', '經濟學系、所', 'User', 5, 0, 0, 'profile_preset.jpg'),
+('wsx2244667@gmail.com', '12345678', '410402408', '2023-05-09', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg'),
+('linglingling7777777@gmail.com', 'test1', 'test1', '2001-01-11', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg');
 
 -- --------------------------------------------------------
 
@@ -99,7 +98,11 @@ INSERT INTO `book_information` (`B_BookID`, `B_BookName`, `B_ISBN`, `B_Author`, 
 (16, 'test4', '88844656', 'author', '4.2', '圖書資訊學系', '資訊管理', '資訊管理.jpg', 4, '~說明文字~\r\n                        ', '', '~說明文字~\r\n                        ', 350, 'test1', '訂單已完成'),
 (19, 'test17', '585641964', 'author', '1.7', '哲學系', '國文', '下載 (3).jpg', 2, '鉛筆', '', '無', 320, '410402226', '訂單已完成'),
 (20, 'test2020', '7727824728', 'author20', '2', '圖書資訊學系', '國文', 'test2.jpg', 3, '原子筆', '', '--', 350, '410402226', '訂單已完成'),
-(21, '資料結構使用Python', '97898650287', '蔡明志', '2', '資訊管理學系', '資料結構', 'ds_python.jpg', 4, '鉛筆、螢光筆筆跡', '', '學姊送的，但我的課本不是用這本，算很新的三手書', 250, '410402226', '賣家已上架');
+(21, '資料結構使用Python', '97898650287', '蔡明志', '2', '資訊管理學系', '資料結構', 'ds_python.jpg', 4, '鉛筆、螢光筆筆跡', '', '學姊送的，但我的課本不是用這本，算很新的三手書', 250, '410402226', '賣家已上架'),
+(22, '基礎邏輯', '97898652290', '周明泉', '1', '全人教育課程', '邏輯與批判性思維', '143272.jpg', 3, '鉛筆、螢光筆筆跡', '周明泉', '通識課，老師一學期大概就教半本', 200, '410402226', '賣家已上架'),
+(23, 'ドコデモ日本語1', '97898644153', '輔仁大學日本語文學系教材編輯委', '2', '', '基礎日文', '143274.jpg', 1, '鉛筆、螢光筆、原子筆筆跡，習題有寫', '林文瑛', '二外基礎日文上學期課本', 100, '410402226', '賣家已上架'),
+(24, '跨網頁程式設計', '97862632401', '陳惠貞', '5', '', 'WEB程式設計', 'web.jpg', 2, '螢光筆筆跡', '廖建翔', '', 250, '410402226', '賣家已上架'),
+(25, 'Java程式設計導論', '97898634747', '蔡明志', '10', '資訊管理學系', '進階程式設計', 'java1.jpg', 5, '沒有字跡', '胡俊之', '封面折到一點點', 400, '410402407', '賣家已上架');
 
 -- --------------------------------------------------------
 
@@ -190,7 +193,7 @@ ALTER TABLE `order_information`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `book_information`
 --
 ALTER TABLE `book_information`
-  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `B_BookID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `comments`

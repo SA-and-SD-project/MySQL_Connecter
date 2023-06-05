@@ -62,12 +62,11 @@ def register():
             A_Email = request.form['A_Email']
             A_Password = request.form['A_Password']
             A_StuID = request.form['A_StuID']
-            A_RealNameVerify = request.form['A_RealNameVerify']
             A_BirthDate = request.form['A_BirthDate']
             A_Major = request.form['A_Major']
 
             cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,A_Password,A_StuID,A_RealNameVerify,A_BirthDate,A_Major))
+            cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,A_Password,A_StuID,A_BirthDate,A_Major))
             mysql.connection.commit()
             session['A_StuID'] = request.form['A_StuID']
             session['A_Email'] = request.form['A_Email']
@@ -289,7 +288,8 @@ def show_user_information_sellerpage():
     select o.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, 
     o.A_BuyerID, a.A_Nickname, a.A_CreditPoint, a.A_TradeCount, a.A_ViolationCount
     from book_information b, order_information o, account_manage a 
-    where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID and o.B_SalerID='{}'
+    where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID 
+    and o.B_SalerID='{}' and b.B_SaleStatus in ('買家已下單', '賣家已確認', '賣家已出貨')
     '''.format(B_SalerID)
     conn = get_conn()
     try:
