@@ -502,6 +502,11 @@ def user_information_buyer_rating(B_BookID):
     insert_or_update_data(sql)
     return redirect('/user_information_orders?tab=finished') #重新導向至已完成分頁
 
+# [我要申訴] 顯示網頁
+@app.route('/grievance')
+def show_grievance():
+    return render_template("grievance.html")
+
 # [上架] 顯示網站
 @app.route('/book_create')
 def show_book_create():
