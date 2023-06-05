@@ -27149,3 +27149,9 @@ INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 03:17:34] "[36mGET /static/js/custom.j
 INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 03:17:34] "[36mGET /static/uploads/¤U¸ü%20(5).jpg HTTP/1.1[0m" 304 -
 INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 03:17:34] "[33mGET /static/uploads/IMG_20180720_093925.jpg HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [06/Jun/2023 03:17:34] "[36mGET /static/uploads/statistics.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 143-820-392
+INFO:werkzeug: * Detected change in 'c:\\Users\\user\\SA_test\\SecondHand_BookWeb_fork2\\app.py', reloading
+INFO:werkzeug: * Restarting with stat

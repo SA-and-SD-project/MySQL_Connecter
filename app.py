@@ -383,7 +383,7 @@ def user_information_seller_rating(B_BookID):
     insert_or_update_data(sql)
     return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
 
-# 暫時: 交易紀錄頁面
+# [交易紀錄] 顯示頁面
 @app.route('/user_information_record')
 def show_user_information_record():
     A_BuyerID = session.get('A_StuID')
@@ -620,13 +620,12 @@ def book_search():
     search_str = request.args.get('search_str')
     session['search_str'] = search_str  # 將 search_str 儲存在 session 中
 
-    # 搜索欄位: 書名、作者、科系、課程、老師
+    # SQL語法 (搜索欄位: 書名、作者、科系、課程、老師)
     sql = f'''select B_BookID, B_BookName, B_BookPic, B_Price from book_information where 
     ((B_BookName like '%{search_str}%') or (B_Author like '%{search_str}%') or (B_BookMajor like '%{search_str}%') 
     or (B_LessonName like '%{search_str}%') or (B_UsedByTeacher like '%{search_str}%'))
     and B_SaleStatus='賣家已上架'
     '''
-    
     # 每次重新搜尋就重置sorting設定
     if 'sorting' in session:
         del session['sorting']  # 從 session 字典中刪除 'sorting' 鍵
@@ -640,7 +639,7 @@ def book_sort():
     session['sorting'] = sorting  # 將 sorting 儲存在 session 中
     search_str = session.get('search_str')
 
-    # 搜索欄位: 書名、作者、科系、課程、老師
+    # SQL語法 (搜索欄位: 書名、作者、科系、課程、老師)
     sql = f'''select B_BookID, B_BookName, B_BookPic, B_Price from book_information where 
     ((B_BookName like '%{search_str}%') or (B_Author like '%{search_str}%') or (B_BookMajor like '%{search_str}%') 
     or (B_LessonName like '%{search_str}%') or (B_UsedByTeacher like '%{search_str}%'))
@@ -657,8 +656,9 @@ def book_sort():
 @app.route('/book_search/<search_str>')
 def show_book_search(sql):
 
-    # 搜索欄位: 書名、作者、科系、課程、老師
+    # 抓取 search_str (搜尋字詞)
     search_str = session.get('search_str')
+    # 抓取 sorting 設定以在前端顯示radio已點按狀態
     sorting = session.get('sorting')
 
     # 執行接收到的SQL
