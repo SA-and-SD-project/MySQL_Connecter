@@ -426,9 +426,9 @@ https://templatemo.com/tm-590-topic-listing
                                             <div>
                                                 <h6>買家資訊</h6>
                                                 <p>買家：{{ book['A_Nickname'] }}（{{ book['A_BuyerID'] }}）</p>
-                                                <p>信用積分：{{ book['A_CreditPoint'] }}</p>
+                                                <p>信用評價：{{ book['A_CreditPoint'] }}（共 {{ book['A_TradeCount'] }} 筆交易）</p>
                                                 <p>交易筆數：{{ book['A_TradeCount'] }}</p>
-                                                <p>違規次數：</p>          
+                                                <p>違規次數：{{ book['A_ViolationCount'] }}</p>          
                                             </div>
                                         </div>
                                     </div>
