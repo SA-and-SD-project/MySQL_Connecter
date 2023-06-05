@@ -267,7 +267,7 @@ https://templatemo.com/tm-590-topic-listing
                                             <div>
                                                 <h4 class="mb-2">書名：{{ book['B_BookName'] }}</h4>
 
-                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}</h5>
+                                                <h5 class="status">狀態：{{ book['B_SaleStatus'] }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
 
                                                 <button class="button modify" {% if book['B_SaleStatus'] != '賣家已確認' %} disabled {% endif %}
                                                     onclick="location.href='/do_saler_delivered/{{ book['B_BookID'] }}'">
@@ -281,6 +281,16 @@ https://templatemo.com/tm-590-topic-listing
                                                     onclick="location.href='/do_saler_cancel/{{ book['B_BookID'] }}'">
                                                     取消
                                                 </button>
+                                            </div>
+                                            <div>
+                                                <p>買家資訊--&nbsp;&nbsp;</P>
+                                            </div>
+                                            <div>
+                                                <p>學號：{{ book['A_BuyerID'] }}</p>
+                                                <p>暱稱：{{ book['A_Nickname'] }}</p>
+                                                <p>信用積分：{{ book['A_CreditPoint'] }}</p>
+                                                <p>交易筆數：{{ book['A_TradeCount'] }}</p>
+                                                <p>違規次數：</p>          
                                             </div>
                                         </div>
                                     </div>

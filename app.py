@@ -267,11 +267,12 @@ def show_user_information_sellerpage():
         conn.close()
     print(sql_uploaded)
 
-    # 進行中(B_SaleStatus='買家已下單' or '賣家已確認' or '賣家已出貨')
+    # 進行中(B_SaleStatus='買家已下單' or '賣家已確認' or '賣家已出貨')，包含買家資訊
     sql_processing = '''
-    select B_BookID, B_BookName, B_BookPic, B_SaleStatus from book_information 
-    where B_SalerID='{}' 
-    and (B_SaleStatus='買家已下單' or B_SaleStatus='賣家已確認' or B_SaleStatus='賣家已出貨')
+    select o.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, 
+    o.A_BuyerID, a.A_Nickname, a.A_CreditPoint, a.A_TradeCount
+    from book_information b, order_information o, account_manage a 
+    where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID and o.B_SalerID='{}'
     '''.format(B_SalerID)
     conn = get_conn()
     try:
