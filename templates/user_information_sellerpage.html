@@ -418,12 +418,14 @@ https://templatemo.com/tm-590-topic-listing
                                                     取消
                                                 </button>
                                             </div>
+
+                                            <!--買家資訊-->
                                             <div>
-                                                <p>買家資訊--&nbsp;&nbsp;</P>
+                                                
                                             </div>
                                             <div>
-                                                <p>學號：{{ book['A_BuyerID'] }}</p>
-                                                <p>暱稱：{{ book['A_Nickname'] }}</p>
+                                                <h6>買家資訊</h6>
+                                                <p>買家：{{ book['A_Nickname'] }}（{{ book['A_BuyerID'] }}）</p>
                                                 <p>信用積分：{{ book['A_CreditPoint'] }}</p>
                                                 <p>交易筆數：{{ book['A_TradeCount'] }}</p>
                                                 <p>違規次數：</p>          
