@@ -32,7 +32,6 @@ CREATE TABLE `account_manage` (
   `A_Email` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_Password` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `A_StuID` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_RealNameVerify` tinyint(1) DEFAULT NULL,
   `A_BirthDate` date DEFAULT NULL,
   `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `A_Nickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'User',
@@ -46,12 +45,12 @@ CREATE TABLE `account_manage` (
 -- 傾印資料表的資料 `account_manage`
 --
 
-INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_RealNameVerify`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`, `A_ViolationCount`, `A_image`) VALUES
-('linglingling7777777@gmail.com', '1234', '111', 1, '2023-01-12', '企業管理學系', 'User', 5, 0, 0, ''),
-('cherry911219@gmail.com', '1111', '410402226', 0, '2002-12-19', '資訊管理學系', '奇怪的知識增加了了了', 5, 0, 0, '—Pngtree—hand-painted ink animal - penguin_4069434.png'),
-('shioubi0216@gmail.com', '123inok', '410402407', 0, '2023-01-19', '經濟學系、所', 'User', 5, 0, 0, 'profile_preset.jpg'),
-('wsx2244667@gmail.com', '12345678', '410402408', 0, '2023-05-09', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg'),
-('linglingling7777777@gmail.com', 'test1', 'test1', 0, '2001-01-11', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg');
+INSERT INTO `account_manage` (`A_Email`, `A_Password`, `A_StuID`, `A_BirthDate`, `A_Major`, `A_Nickname`, `A_CreditPoint`, `A_TradeCount`, `A_ViolationCount`, `A_image`) VALUES
+('linglingling7777777@gmail.com', '1234', '111', '2023-01-12', '企業管理學系', 'User', 5, 0, 0, ''),
+('cherry911219@gmail.com', '1111', '410402226', '2002-12-19', '資訊管理學系', '奇怪的知識增加了了了', 5, 0, 0, '—Pngtree—hand-painted ink animal - penguin_4069434.png'),
+('shioubi0216@gmail.com', '123inok', '410402407', '2023-01-19', '經濟學系、所', 'User', 5, 0, 0, 'profile_preset.jpg'),
+('wsx2244667@gmail.com', '12345678', '410402408', '2023-05-09', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg'),
+('linglingling7777777@gmail.com', 'test1', 'test1', '2001-01-11', '音樂學系', 'User', 5, 0, 0, 'profile_preset.jpg');
 
 -- --------------------------------------------------------
 

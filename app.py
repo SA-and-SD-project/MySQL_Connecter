@@ -62,12 +62,11 @@ def register():
             A_Email = request.form['A_Email']
             A_Password = request.form['A_Password']
             A_StuID = request.form['A_StuID']
-            A_RealNameVerify = request.form['A_RealNameVerify']
             A_BirthDate = request.form['A_BirthDate']
             A_Major = request.form['A_Major']
 
             cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_RealNameVerify, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,A_Password,A_StuID,A_RealNameVerify,A_BirthDate,A_Major))
+            cur.execute("INSERT INTO account_manage (A_Email, A_Password, A_StuID, A_BirthDate, A_Major) VALUES (%s,%s,%s,%s,%s,%s)",(A_Email,A_Password,A_StuID,A_BirthDate,A_Major))
             mysql.connection.commit()
             session['A_StuID'] = request.form['A_StuID']
             session['A_Email'] = request.form['A_Email']
