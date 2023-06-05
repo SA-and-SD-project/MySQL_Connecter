@@ -382,23 +382,21 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                                         <h4 class="mb-0">賣家基本資料</h4>
+                                        <h5></h5>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <h5>賣家：{{ saler['A_Nickname'] }}（{{ saler['A_StuID'] }}）</h5>
+
                                         <h5><img src="../static/uploads/{{ saler['A_image'] }}"
                                             class="custom-block-image img-fluid" alt=""></h5>
                                     </div>
 
-                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <h4 class="mb-0">暱稱：{{ saler['A_Nickname'] }}</h4>
-                                        <br>
-                                        <br>
-                                        <h5>學號：{{ saler['A_StuID'] }}</h5>
-
-                                    </div>
-
                                     <div class="col-lg-4 col-md-6 col-12">
-                                        <h4 class="mb-0">交易筆數：{{ saler['A_TradeCount'] }}</h4>
+                                        <h5>信用評價：{{ saler['A_CreditPoint'] }}（共{{ saler['A_TradeCount'] }}筆交易）</h5>
                                         <br>
                                         <br>
-                                        <h5>違規次數：</h5>
+                                        <h5>違規次數：{{ saler['A_ViolationCount'] }}</h5>
                                     </div>
                                 </div>
 
