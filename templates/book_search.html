@@ -129,10 +129,14 @@
         <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-8 col-12 mx-auto">
-                    </div>
-
+                    <form action="/do_book_sort" method="POST">
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <input type="radio" name="sorting" value="" {% if sorting not in ['B_Price_asc', 'B_BookStatus_desc'] %}checked{% endif %}>預設排序&nbsp;&nbsp;
+                            <input type="radio" name="sorting" value="B_Price_asc" {% if sorting == 'B_Price_asc' %}checked{% endif %}>價格由小到大&nbsp;&nbsp;
+                            <input type="radio" name="sorting" value="B_BookStatus_desc" {% if sorting == 'B_BookStatus_desc' %}checked{% endif %}>狀態由新到舊&nbsp;&nbsp;
+                            <input type="submit" name="submit" value="確認">
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

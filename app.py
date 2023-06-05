@@ -287,7 +287,7 @@ def show_user_information_sellerpage():
     # 進行中(B_SaleStatus='買家已下單' or '賣家已確認' or '賣家已出貨')，包含買家資訊
     sql_processing = '''
     select o.B_BookID, b.B_BookName, b.B_BookPic, b.B_SaleStatus, 
-    o.A_BuyerID, a.A_Nickname, a.A_CreditPoint, a.A_TradeCount
+    o.A_BuyerID, a.A_Nickname, a.A_CreditPoint, a.A_TradeCount, a.A_ViolationCount
     from book_information b, order_information o, account_manage a 
     where b.B_BookID = o.B_BookID and o.A_BuyerID = a.A_StuID and o.B_SalerID='{}'
     '''.format(B_SalerID)
@@ -383,7 +383,7 @@ def user_information_seller_rating(B_BookID):
     insert_or_update_data(sql)
     return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
 
-# 暫時: 交易紀錄頁面
+# [交易紀錄] 顯示頁面
 @app.route('/user_information_record')
 def show_user_information_record():
     A_BuyerID = session.get('A_StuID')
@@ -618,18 +618,50 @@ def show_book_display():
 @app.route('/do_book_search', methods=['GET'])
 def book_search():
     search_str = request.args.get('search_str')
-    return show_book_search(search_str)
+    session['search_str'] = search_str  # 將 search_str 儲存在 session 中
 
-# [依"標籤"尋找書籍] 顯示網站
-@app.route('/book_search/<search_str>')
-def show_book_search(search_str):
-    # 搜索欄位: 書名、作者、科系、課程、老師
-    # 僅篩選狀態為'賣家已上架'的書籍
+    # SQL語法 (搜索欄位: 書名、作者、科系、課程、老師)
     sql = f'''select B_BookID, B_BookName, B_BookPic, B_Price from book_information where 
     ((B_BookName like '%{search_str}%') or (B_Author like '%{search_str}%') or (B_BookMajor like '%{search_str}%') 
     or (B_LessonName like '%{search_str}%') or (B_UsedByTeacher like '%{search_str}%'))
     and B_SaleStatus='賣家已上架'
     '''
+    # 每次重新搜尋就重置sorting設定
+    if 'sorting' in session:
+        del session['sorting']  # 從 session 字典中刪除 'sorting' 鍵
+
+    return show_book_search(sql)
+
+# [依"標籤"尋找書籍] 為搜尋結果排序
+@app.route('/do_book_sort', methods=["POST"])
+def book_sort():
+    sorting = request.form.get('sorting', "") # 若沒抓到值，預設為""
+    session['sorting'] = sorting  # 將 sorting 儲存在 session 中
+    search_str = session.get('search_str')
+
+    # SQL語法 (搜索欄位: 書名、作者、科系、課程、老師)
+    sql = f'''select B_BookID, B_BookName, B_BookPic, B_Price from book_information where 
+    ((B_BookName like '%{search_str}%') or (B_Author like '%{search_str}%') or (B_BookMajor like '%{search_str}%') 
+    or (B_LessonName like '%{search_str}%') or (B_UsedByTeacher like '%{search_str}%'))
+    and B_SaleStatus='賣家已上架'
+    '''
+    # 加上排序
+    if sorting == "B_Price_asc":
+        sql += " order by B_Price asc"
+    elif sorting == "B_BookStatus_desc":
+        sql += " order by B_BookStatus desc"
+    return show_book_search(sql)
+
+# [依"標籤"尋找書籍] 顯示網站，
+@app.route('/book_search/<search_str>')
+def show_book_search(sql):
+
+    # 抓取 search_str (搜尋字詞)
+    search_str = session.get('search_str')
+    # 抓取 sorting 設定以在前端顯示radio已點按狀態
+    sorting = session.get('sorting')
+
+    # 執行接收到的SQL
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
@@ -639,7 +671,7 @@ def show_book_search(search_str):
     finally:
         conn.close()
     print(sql)
-    return render_template("book_search.html", datas = datas, search_str = search_str)
+    return render_template("book_search.html", datas = datas, search_str = search_str, sorting = sorting)
 
 
 # [查看書籍詳細資訊] 顯示網站 
@@ -817,6 +849,25 @@ def contact():
 @app.route('/grievance')
 def grievance_Procedure():
     return render_template("grievance.html")
+
+# 測試display(v3) 
+@app.route('/display')
+def show_display():
+    # 搜索欄位: 書名、作者、科系、課程、老師
+    # 僅篩選狀態為'賣家已上架'的書籍
+    sql = f'''select B_BookID, B_BookName, B_BookPic, B_Price from book_information
+    '''
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        cursor.execute(sql)
+        datas = cursor.fetchall()
+        print(datas)
+    finally:
+        conn.close()
+    print(sql)
+
+    return render_template("book_display3.html", datas = datas)
 
 # 執行
 if __name__ == '__main__': # 如果以主程式執行
