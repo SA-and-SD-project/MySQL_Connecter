@@ -369,29 +369,107 @@ def book_delete(B_BookID):
 # [賣家介面] 我已出貨按鈕 (B_SaleStatus --> '賣家已出貨')
 @app.route('/do_saler_delivered/<B_BookID>')
 def saler_delivered(B_BookID):
-    sql = "update book_information set B_SaleStatus='賣家已出貨' where B_BookID={}".format(B_BookID)
-    print(sql)
-    insert_or_update_data(sql)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        sql = "update book_information set B_SaleStatus='賣家已出貨' where B_BookID={}".format(B_BookID)
+        cursor.execute(sql)
+        conn.commit()
+
+        # Fetching book details for email
+        book_sql = "select * from book_information where B_BookID=" + B_BookID
+        cursor.execute(book_sql)
+        book_datas = cursor.fetchall()
+        if book_datas:
+            book = book_datas[0]
+        else:
+            book = None
+
+        # Fetching buyer's email and locker_id
+        buyer_info_sql = "select A_Email, locker_id from account_manage join order_information on account_manage.A_StuID = order_information.A_BuyerID where order_information.B_BookID=" + B_BookID
+        cursor.execute(buyer_info_sql)
+        buyer_info = cursor.fetchone()
+        buyer_email = buyer_info['A_Email']
+        locker_id = buyer_info['locker_id']
+
+        # Send email to the buyer
+        send_email_Buyer(buyer_email, session['A_StuID'], book['B_BookName'], locker_id)
+
+    finally:
+        conn.close()
+
     return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
 
 # [賣家介面] 確認按鈕 (B_SaleStatus --> '賣家已確認')
 @app.route('/do_saler_check/<B_BookID>')
 def saler_check(B_BookID):
-    sql = "update book_information set B_SaleStatus='賣家已確認' where B_BookID={}".format(B_BookID)
-    print(sql)
-    insert_or_update_data(sql)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
+        sql = "update book_information set B_SaleStatus='賣家已確認' where B_BookID={}".format(B_BookID)
+        cursor.execute(sql)
+        conn.commit()
+
+        # Fetching book details for email
+        book_sql = "select * from book_information where B_BookID=" + B_BookID
+        cursor.execute(book_sql)
+        book_datas = cursor.fetchall()
+        if book_datas:
+            book = book_datas[0]
+        else:
+            book = None
+
+        # Fetching buyer's email
+        buyer_info_sql = "select A_Email from account_manage join order_information on account_manage.A_StuID = order_information.A_BuyerID where order_information.B_BookID=" + B_BookID
+        cursor.execute(buyer_info_sql)
+        buyer_info = cursor.fetchone()
+        buyer_email = buyer_info['A_Email']
+
+        # Send email to the buyer
+        send_email_Buyer(buyer_email, session['A_StuID'], book['B_BookName'])
+
+    finally:
+        conn.close()
+
     return redirect('/user_information_sellerpage') # 重新導向至賣家介面
+
 
 # [賣家介面] 取消按鈕 (B_SaleStatus --> '賣家已上架'，可重新被搜尋及下單)
 @app.route('/do_saler_cancel/<B_BookID>')
 def saler_cancel(B_BookID):
-    sql_ststus = "update book_information set B_SaleStatus='賣家已上架' where B_BookID={}".format(B_BookID)
-    sql_order = "delete from order_information where B_BookID={}".format(B_BookID)
+    conn = get_conn()
+    try:
+        cursor = conn.cursor(pymysql.cursors.DictCursor)
 
-    insert_or_update_data(sql_ststus) # 更新B_SaleStatus狀態
-    insert_or_update_data(sql_order) # 刪除訂單紀錄
-    print(sql_ststus)
-    print(sql_order)
+        # Fetching book details for email
+        book_sql = "select * from book_information where B_BookID=" + B_BookID
+        cursor.execute(book_sql)
+        book_datas = cursor.fetchall()
+        if book_datas:
+            book = book_datas[0]
+        else:
+            book = None
+
+        # Fetching buyer's email
+        buyer_info_sql = "select A_Email from account_manage join order_information on account_manage.A_StuID = order_information.A_BuyerID where order_information.B_BookID=" + B_BookID
+        cursor.execute(buyer_info_sql)
+        buyer_info = cursor.fetchone()
+        buyer_email = buyer_info['A_Email']
+
+        # Update sale status and delete order
+        sql_status = "update book_information set B_SaleStatus='賣家已上架' where B_BookID={}".format(B_BookID)
+        sql_order = "delete from order_information where B_BookID={}".format(B_BookID)
+        cursor.execute(sql_status)
+        cursor.execute(sql_order)
+        conn.commit()
+
+        # Send email to the buyer
+        send_email_Buyer(buyer_email, session['A_StuID'], book['B_BookName'])
+
+    finally:
+        conn.close()
+
     return redirect('/user_information_sellerpage') # 重新導向至賣家介面
 
 
@@ -790,10 +868,64 @@ def show_book_detail(B_BookID):
 #定義寄信功能的function(寄給買家)
 def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
     content = MIMEMultipart()
-    content["subject"] = "您在輔大二手書網站的交易已成功!"
+    content["subject"] = (f"您在輔大二手書網站 購買 {book_name} 的訂單已成立，但尚未被賣家同意!")
     content["from"] = "wsx2244667@gmail.com"
     content["to"] = to_email
-    content.attach(MIMEText(f"Please proceed to locker {locker_id} to get your book {book_name}"))
+    content.attach(MIMEText(f"已經成功下訂，請耐心等候賣家同意您的訂單!"))
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
+        try:
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")
+            smtp.send_message(content)
+            print("Email sent!")
+        except Exception as e:
+            print("Error message: ", e)
+            
+#賣家按下確認按鈕，將訂單確立，寄信給買家
+def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
+    content = MIMEMultipart()
+    content["subject"] = (f"您在輔大二手書網站 購買 {book_name} 的訂單已被同意!")
+    content["from"] = "wsx2244667@gmail.com"
+    content["to"] = to_email
+    content.attach(MIMEText(f"您在輔大二手書網站 購買 {book_name} 訂單已被同意，請耐心等待賣家出貨!"))
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
+        try:
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")
+            smtp.send_message(content)
+            print("Email sent!")
+        except Exception as e:
+            print("Error message: ", e)
+            
+#賣家按下取消按鈕，將訂單取消，寄信給買家
+def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
+    content = MIMEMultipart()
+    content["subject"] = (f"您在輔大二手書網站下訂的訂單已被取消!")
+    content["from"] = "wsx2244667@gmail.com"
+    content["to"] = to_email
+    content.attach(MIMEText(f"您在輔大二手書網站下訂訂單已被取消，再看看其他貨品吧!"))
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
+        try:
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")
+            smtp.send_message(content)
+            print("Email sent!")
+        except Exception as e:
+            print("Error message: ", e)
+            
+#賣家按下我已出貨按鈕，將書籍出貨，寄信給買家
+def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
+    content = MIMEMultipart()
+    content["subject"] = (f"您在輔大二手書網站 購買 {book_name} 的訂單即將完成，請前往面交櫃取書!")
+    content["from"] = "wsx2244667@gmail.com"
+    content["to"] = to_email
+    content.attach(MIMEText(f"請前往 {locker_id} 號 面交櫃進行付款與拿取您的書籍!，付款完畢後也請記得給評價ㄛ~"))
 
     with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
         try:
@@ -805,13 +937,13 @@ def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
         except Exception as e:
             print("Error message: ", e)
 
-#寄信功能的function(寄給賣家)，通知交易成功
+#寄信功能的function(寄給賣家)，通知有人下訂
 def send_email_Saler(to_email, A_SalerID, book_name, locker_id):
     content = MIMEMultipart()
-    content["subject"] = "您在輔大二手書網站的交易已成功!"
+    content["subject"] = (f"您在輔大二手書網站上架的 {book_name} 書籍已被下訂!")
     content["from"] = "wsx2244667@gmail.com"
     content["to"] = to_email
-    content.attach(MIMEText(f"Please proceed to locker {locker_id} to put your book {book_name}"))
+    content.attach(MIMEText(f"如果您有意願交易或是確認詳細訂單，請前往賣家頁面!"))
 
     with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
         try:
