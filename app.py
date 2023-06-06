@@ -711,7 +711,7 @@ def show_book_search(sql):
     print(sql)
     return render_template("book_search.html", datas = datas, search_str = search_str, sorting = sorting)
 
-
+#顯示書籍詳細資訊
 from flask import request
 import datetime
 
@@ -734,7 +734,35 @@ def show_book_detail(B_BookID):
             """
             cursor.execute(insert_comment_sql, (A_StuID, B_BookID, C_CommentText, datetime.datetime.now(), C_ParentCommentID))
             conn.commit()
-            
+
+            # Fetching book details for email
+            book_sql = "select * from book_information where B_BookID=" + B_BookID
+            cursor.execute(book_sql)
+            book_datas = cursor.fetchall()
+            if book_datas:
+                book = book_datas[0]
+            else:
+                book = None
+
+            # Fetching saler's email
+            saler_email_sql = "select A_Email from account_manage where A_StuID='" + book['B_SalerID'] + "'"
+            cursor.execute(saler_email_sql)
+            saler_email = cursor.fetchone()['A_Email']
+
+            # If this is a new comment, send email to the book's seller
+            if C_ParentCommentID is None:
+                send_email_Notification(saler_email, book['B_BookName'])
+            # If this is a reply, send email to the original commenter
+            else:
+                original_commenter_email_sql = """
+                select account_manage.A_Email 
+                from account_manage join comments on account_manage.A_StuID = comments.A_StuID 
+                where comments.C_CommentID=%s
+                """
+                cursor.execute(original_commenter_email_sql, C_ParentCommentID)
+                original_commenter_email = cursor.fetchone()['A_Email']
+                send_email_Notification(original_commenter_email, book['B_BookName'])
+
             return redirect(url_for('show_book_detail', B_BookID=B_BookID))
 
         # Fetching book details
@@ -758,7 +786,8 @@ def show_book_detail(B_BookID):
     # Return the book detail and comments information to the template
     return render_template("book_detail.html", book=book, comments=comments)
 
-#定義寄信功能的function
+
+#定義寄信功能的function(寄給買家)
 def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
     content = MIMEMultipart()
     content["subject"] = "您在輔大二手書網站的交易已成功!"
@@ -776,12 +805,30 @@ def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):
         except Exception as e:
             print("Error message: ", e)
 
+#寄信功能的function(寄給賣家)，通知交易成功
 def send_email_Saler(to_email, A_SalerID, book_name, locker_id):
     content = MIMEMultipart()
     content["subject"] = "您在輔大二手書網站的交易已成功!"
     content["from"] = "wsx2244667@gmail.com"
     content["to"] = to_email
     content.attach(MIMEText(f"Please proceed to locker {locker_id} to put your book {book_name}"))
+
+    with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
+        try:
+            smtp.ehlo()
+            smtp.starttls()
+            smtp.login("wsx2244667@gmail.com", "gpitruqqyaubmocl")
+            smtp.send_message(content)
+            print("Email sent!")
+        except Exception as e:
+            print("Error message: ", e)
+#發送ㄊㄓ        
+def send_email_Notification(to_email, book_name,):
+    content = MIMEMultipart()
+    content["subject"] = (f"在 {book_name} 中的交流板裡有關於您的留言!")
+    content["from"] = "wsx2244667@gmail.com"
+    content["to"] = to_email
+    content.attach(MIMEText(f"在您已上架或是您互動過的 {book_name} 書中的交流版有新訊息! 請前往查看!"))
 
     with smtplib.SMTP(host="smtp.gmail.com", port="587") as smtp:
         try:
