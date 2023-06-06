@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL, MySQLdb
 import pymysql
@@ -12,7 +12,7 @@ from time import sleep
 import os
 import pathlib
 from flask import Flask, url_for, redirect,  render_template, request
-
+from flask import jsonify
 import logging
 
 logging.basicConfig(filename='error.log', level=logging.DEBUG)
@@ -142,17 +142,42 @@ def insert_or_update_data(sql):
 @app.route('/user_information')
 def show_user_information():
     A_StuID = session.get('A_StuID')
-    sql = "select * from account_manage where A_StuID = '{}'".format(A_StuID) #怎麼取A_StuID的值
+    sql = "select * from account_manage where A_StuID = '{}'".format(A_StuID)
     conn = get_conn()
+
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
         cursor.execute(sql)
         datas = cursor.fetchall()
         account = datas[0]
+
+        # 獲取買家評價
+        buyer_sql = "SELECT O_SalerRating FROM order_information WHERE A_BuyerID = '{}' AND O_SalerRating > 0".format(A_StuID)
+        cursor.execute(buyer_sql)
+        buyer_ratings = [item['O_SalerRating'] for item in cursor.fetchall()]
+
+        # 獲取賣家評價
+        seller_sql = "SELECT O_BuyerRating FROM order_information WHERE B_SalerID = '{}' AND O_BuyerRating > 0".format(A_StuID)
+        cursor.execute(seller_sql)
+        seller_ratings = [item['O_BuyerRating'] for item in cursor.fetchall()]
+
+        # 合併買家和賣家評價
+        all_ratings = buyer_ratings + seller_ratings
+
+        # 如果存在評價，則計算平均值並四捨五入
+        total_avg_rating = round(sum(all_ratings) / len(all_ratings), 1) if all_ratings else 0
+
+        # 更新A_CreditPoint值
+        update_sql = "UPDATE account_manage SET A_CreditPoint = {} WHERE A_StuID = '{}'".format(total_avg_rating, A_StuID)
+        cursor.execute(update_sql)
+        conn.commit()
+
     finally:
         conn.close()
     print(sql)
     return render_template("user_information.html", account=account, A_StuID=A_StuID)
+
+
 
 # 個人資料頁面
 @app.route('/user_information_profile')
@@ -340,18 +365,22 @@ def book_delete(B_BookID):
 
     return redirect('/user_information_sellerpage') #重新導向(尚未導至已上架分頁)
 
+from flask import request, jsonify
+
 # [賣家介面] 賣家評價功能
 @app.route('/do_user_information_seller_rating/<B_BookID>', methods=['POST'])
 def user_information_seller_rating(B_BookID):
-    print(request.form)
-    O_SalerRating = request.form.get("O_SalerRating")
+    data = request.get_json()
+    O_SalerRating = data.get("O_SalerRating")
     sql = f'''
     update order_information set O_SalerRating={O_SalerRating}
     where B_BookID={B_BookID}
     '''
     print(sql)
     insert_or_update_data(sql)
-    return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁
+    return jsonify({'status': 'success'}), 200
+
+   # return redirect('/user_information_sellerpage?tab=finished') #重新導向至已完成分頁 
 
 # 顯示[查詢訂單] 篩選條件：A_BuyerID、B_SaleStatus
 @app.route('/user_information_orders')
@@ -416,15 +445,26 @@ def show_user_information_orders():
 # [查詢訂單] 買家評價功能
 @app.route('/do_user_information_buyer_rating/<B_BookID>', methods=['POST'])
 def user_information_buyer_rating(B_BookID):
-    print(request.form)
-    O_BuyerRating = request.form.get("O_BuyerRating")
+    # print(request.form)
+    # O_BuyerRating = request.form.get("O_BuyerRating")
+    # sql = f'''
+    # update order_information set O_BuyerRating={O_BuyerRating}
+    # where B_BookID={B_BookID}
+    # '''
+    # print(sql)
+    # insert_or_update_data(sql)
+    
+    data = request.get_json()
+    O_BuyerRating = data.get("O_BuyerRating")
     sql = f'''
     update order_information set O_BuyerRating={O_BuyerRating}
     where B_BookID={B_BookID}
     '''
     print(sql)
     insert_or_update_data(sql)
-    return redirect('/user_information_orders?tab=finished') #重新導向至已完成分頁
+    return jsonify({'status': 'success'}), 200
+
+  #  return redirect('/user_information_orders?tab=finished') #重新導向至已完成分頁
 
 # [上架] 顯示網站
 @app.route('/book_create')
@@ -561,25 +601,51 @@ def show_book_search(search_str):
     return render_template("book_search.html", datas = datas, search_str = search_str)
 
 
-# [查看書籍詳細資訊] 顯示網站 
-# #加入comment資料表的資訊，否則iframe讀取不到
-@app.route('/book_detail/<B_BookID>')
+from flask import request
+import datetime
+
+@app.route('/book_detail/<B_BookID>', methods=['GET', 'POST'])
 def show_book_detail(B_BookID):
-    sql = "select * from book_information where B_BookID=" + B_BookID
     conn = get_conn()
     try:
         cursor = conn.cursor(pymysql.cursors.DictCursor)
-        cursor.execute(sql)
-        datas = cursor.fetchall()
-        if datas:  # check if datas is not empty
-            book = datas[0]
-            session['B_SalerID'] = book['B_SalerID']  # store B_SalerID in the session
+
+        # Handle POST request
+        if request.method == 'POST':
+            A_StuID = session.get('A_StuID')  # Get the user ID from the session
+            C_CommentText = request.form.get('C_CommentText')  # Get the comment text from the form
+            C_ParentCommentID = request.form['C_ParentCommentID'] or None  # Convert empty strings to None
+
+            # Insert new comment into the database
+            insert_comment_sql = """
+            INSERT INTO comments (A_StuID, B_BookID, C_CommentText, C_CommentTime, C_ParentCommentID)
+            VALUES (%s, %s, %s, %s, %s)
+            """
+            cursor.execute(insert_comment_sql, (A_StuID, B_BookID, C_CommentText, datetime.datetime.now(), C_ParentCommentID))
+            conn.commit()
+            
+            return redirect(url_for('show_book_detail', B_BookID=B_BookID))
+
+        # Fetching book details
+        book_sql = "select * from book_information where B_BookID=" + B_BookID
+        cursor.execute(book_sql)
+        book_datas = cursor.fetchall()
+        if book_datas:
+            book = book_datas[0]
+            session['B_SalerID'] = book['B_SalerID']
         else:
-            book = None  # or handle this case appropriately
+            book = None
+
+        # Fetching comments
+        comments_sql = "select * from comments where B_BookID=" + B_BookID + " ORDER BY C_CommentTime DESC"
+        cursor.execute(comments_sql)
+        comments = cursor.fetchall()  # Fetching all the comments related to this book
+
     finally:
         conn.close()
-    print(sql)
-    return render_template("book_detail.html", book = book)
+
+    # Return the book detail and comments information to the template
+    return render_template("book_detail.html", book=book, comments=comments)
 
 #定義寄信功能的function
 def send_email_Buyer(to_email, A_BuyerID, book_name, locker_id):

@@ -36,7 +36,7 @@ CREATE TABLE `account_manage` (
   `A_BirthDate` date DEFAULT NULL,
   `A_Major` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `A_Nickname` varchar(25) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `A_CreditPoint` int(10) NOT NULL DEFAULT '50',
+  `A_CreditPoint` int(10) NOT NULL DEFAULT '0',
   `A_TradeCount` int(10) NOT NULL DEFAULT '0',
   `A_image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -133,14 +133,14 @@ CREATE TABLE `order_information` (
 --
 
 INSERT INTO `order_information` (`O_OrderID`, `O_OrderTime`, `O_LockerID`, `B_BookID`, `A_BuyerID`, `B_SalerID`, `O_SalerRating`, `O_BuyerRating`) VALUES
-(1, '2023-05-23 14:39:40', '1', 11, '410402407', 'test1', 0, 0),
-(2, '2023-05-23 14:39:52', '1', 11, '410402407', 'test1', 0, 0),
-(3, '2023-05-23 14:40:01', '1', 11, '410402407', 'test1', 0, 0),
-(4, '2023-05-23 14:40:18', '1', 10, '410402407', '410402226', 3, 0),
-(5, '2023-05-23 14:51:43', '1', 11, '410402407', 'test1', 0, 0),
-(10, '2023-05-25 18:00:05', '1', 14, '410402226', 'test1', 0, 0),
-(11, '2023-05-25 18:04:29', '1', 15, 'test1', '410402226', 0, 0),
-(12, '2023-05-25 18:07:04', '1', 16, '410402226', 'test1', 0, 4);
+(1, '2023-05-23 14:39:40', '1', 11, '410402407', 'test1', 4, 0),
+(2, '2023-05-23 14:39:52', '1', 11, '410402407', 'test1', 3, 0),
+(3, '2023-05-23 14:40:01', '1', 11, '410402407', 'test1', 3, 0),
+(4, '2023-05-23 14:40:18', '1', 10, '410402407', '410402226', 3, 5),
+(5, '2023-05-23 14:51:43', '1', 11, '410402407', 'test1', 1, 0),
+(10, '2023-05-25 18:00:05', '1', 14, '410402226', 'test1', 1, 0),
+(11, '2023-05-25 18:04:29', '1', 15, 'test1', '410402226', 0, 5),
+(12, '2023-05-25 18:07:04', '1', 16, '410402226', 'test1', 1, 4);
 
 --
 -- 已傾印資料表的索引

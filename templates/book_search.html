@@ -163,20 +163,19 @@
                     <!--格子本體-->
                     <!--從這裡-->
                     <!--{% for book in datas %}
-            <div class="grid-item">
-                <div class="image-container">
+                    <div class="grid-item">
+                    <div class="image-container">
                     <a href="/book_detail/{{ book['B_BookID'] }}" class="content">
                         <img src="../static/uploads/{{ book['B_BookPic'] }}" alt="圖片">
                     </a>
-                </div>
-                <div class="text-container">
+                    < /div>
+                    <div class="text-container">
                     <p>書名：{{ book['B_BookName'] }}</p>
                     <p>售價：NT$ {{ book['B_Price'] }}</p>
                 </div>
             </div>
             {% endfor %}
             到這裡是一個格子 一頁顯示最多16張 4*4-->
-
                 </div>
             </div>
         </section>

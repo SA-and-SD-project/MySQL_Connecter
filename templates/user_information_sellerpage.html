@@ -123,30 +123,40 @@ https://templatemo.com/tm-590-topic-listing
   } else {
     // 讀取值為 0 時的操作
     editBtn.on("click", function() {
-      if (enableEdit) {
-        var confirmation = confirm("確定送出評價?");
-        if (confirmation) {
-          enableEdit = false; // 鎖定按鈕
-          editBtn.text("已評價");
-          
-          // 提交評價給後端的相關動作
-          //..
-          //..
-          //End...//
-          
-          // 鎖定星星，使其不能互動
-          commentSection.off("mouseenter", "li", starHoverEnter);
-          commentSection.off("mouseleave", starHoverLeave);
-          commentSection.off("click", "li", starClick);
-
-          // 提交評價給後端的相關動作
-
-         /* 這是網頁重新整理，接完後端後打開可以測試有沒有抓到值
-         location.reload(); 
-         */
+        if (enableEdit) {
+          var confirmation = confirm("確定送出評價?");
+          if (confirmation) {
+            enableEdit = false; // 鎖定按鈕
+            editBtn.text("已評價");
+      
+            // 計算評價的分數
+            var rating = commentSection.find('li').index($('.clicked')) + 1;
+      
+            // 傳送評價到後端
+            fetch(`/do_user_information_seller_rating/${B_BookID}`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ O_SalerRating: rating })
+            })
+            .then(response => response.json())
+            .then(data => {
+              console.log(data); // 處理返回的數據
+            })
+            .catch((error) => {
+              console.error('Error:', error);
+            });
+      
+            // 鎖定星星，使其不能互動
+            commentSection.off("mouseenter", "li", starHoverEnter);
+            commentSection.off("mouseleave", starHoverLeave);
+            commentSection.off("click", "li", starClick);
+      
+            location.reload(); 
+          }
         }
-      }
-    });
+      });
 
     commentSection.on("mouseenter", "li", starHoverEnter);
     commentSection.on("mouseleave", starHoverLeave);
@@ -460,7 +470,10 @@ https://templatemo.com/tm-590-topic-listing
                                                 </form>
                                                 
                                             </div>
-                                            <button id="editBtn" onclick="toggleEditMode()">評價</button>
+                                            <button id="editBtn" type="submit" name="submit"
+                                                {% if book['O_SalerRating'] != 0 %} disabled {% endif %}>
+                                            評價
+                                            </button>
                                         </div>
                                     </div>
                                     {% endfor %}
