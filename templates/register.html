@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Topic Listing Contact Page</title>
+  <title>註冊</title>
 
   <!-- CSS FILES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,15 +64,6 @@ https://templatemo.com/tm-590-topic-listing
             <li class="nav-item">
               <a class="nav-link click" href="/login">登入</a>
             </li>
-            {% endif %}
-
-            {% if session['A_StuID'] %}
-            <!--已登入-->
-            <li class="nav-item">
-              <a class="nav-link click" href="/star">關注中</a>
-            </li>
-            {% else %}
-            <!--沒有登入-->
             {% endif %}
 
             {% if session['A_StuID'] %}
@@ -274,12 +265,6 @@ https://templatemo.com/tm-590-topic-listing
                 </select>
               </div>
               <br>
-              <div class="form-floating">
-                <input id="verify-input-hidden" type="hidden" class="form-contrl" name="A_RealNameVerify">
-                <h5 class="text-white">是否需要實名認證?(請輸入Y/N)</h5>
-                <input type="text" id="verify-input" name="A_RealNameVerify_original" class="form-contrl"
-                  required="required">
-              </div>
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
               <script>
                 $(document).ready(function () {

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>輔大二手課本交易平台</title>
+    <title>我要申訴</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,15 +62,6 @@ https://templatemo.com/tm-590-topic-listing
                         <li class="nav-item">
                             <a class="nav-link click" href="/login">登入</a>
                         </li>
-                        {% endif %}
-
-                        {% if session['A_StuID'] %}
-                        <!--已登入-->
-                        <li class="nav-item">
-                            <a class="nav-link click" href="/star">關注中</a>
-                        </li>
-                        {% else %}
-                        <!--沒有登入-->
                         {% endif %}
 
                         {% if session['A_StuID'] %}
@@ -140,6 +131,22 @@ https://templatemo.com/tm-590-topic-listing
             <div class="container">
                 <div class="row">
 
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/">首頁</a>
+                            </li>
+
+                            <li class="breadcrumb-item">
+                                <a href="/user_information">個人資料</a>
+                            </li>
+
+                            <li class="breadcrumb-item active" aria-current="page">
+                                我要申訴
+                            </li>
+                        </ol>
+                    </nav>
+
                     <div class="col-12 text-center">
                         <h2 class="text-white mb-4">申訴管道-客服信箱</h1>
                     </div>
@@ -196,7 +203,8 @@ https://templatemo.com/tm-590-topic-listing
 
                     <div class="col-12 text-center mt-5">
                         <p class="text-white">
-                            <a href="mailto: wsx2244667@gmail.com" class="btn custom-btn custom-border-btn ms-3">發送Email給我們 -&gt; </a>
+                            <a href="mailto:wsx2244667@gmail.com?subject=輔大二手課本交易平台 交易申訴&body=我遇到了不愉快的交易體驗，需要回報官方客服%0A%0A我的學號：%0A對方的學號：%0A交易書名：%0A%0A申訴理由：%0A詳細狀況：%0A%0A"
+                            class="btn custom-btn custom-border-btn ms-3">發送Email給我們 -&gt; </a>
                         </p>
                     </div>
                 </div>

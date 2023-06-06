@@ -19,7 +19,7 @@
 
     <link href="../static/css/templatemo-topic-listing.css" rel="stylesheet">
 
-    <title>個人資料頁面</title>
+    <title>個人資料</title>
 </head>
 
 <body>
@@ -51,15 +51,6 @@
                     <li class="nav-item">
                         <a class="nav-link click" href="/login">登入</a>
                     </li>
-                    {% endif %}
-
-                    {% if session['A_StuID'] %}
-                    <!--已登入-->
-                    <li class="nav-item">
-                        <a class="nav-link click" href="/star">關注中</a>
-                    </li>
-                    {% else %}
-                    <!--沒有登入-->
                     {% endif %}
 
                     {% if session['A_StuID'] %}
@@ -152,7 +143,7 @@
                                                 name="A_Nickname" required>{{ account['A_Nickname'] }}
                                             <!--這邊替換位置-->
                                         </h5>
-                                        <h5>信用積分：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）
+                                        <h5>信用評價：{{ account['A_CreditPoint'] }} （共 {{ account['A_TradeCount'] }} 筆交易）
                                             <!--這邊替換位置-->
                                         </h5>
                                         <h5>學號：<input id="input-hidden" type="hidden" value="{{ account['A_StuID'] }}"
@@ -190,11 +181,12 @@
                                         onclick="location.href='/user_information_profile_update/{{ account['A_StuID'] }}'">修改資料
                                     </button>
                                     <a href="/user_information_orders" class="btn custom-btn mt-3 mt-lg-4">查詢訂單</a>
-                                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">交易紀錄</a>
+                                    <!--<a href="/user_information_orders.html?tab=finished" class="btn custom-btn mt-3 mt-lg-4">交易紀錄</a>-->
+                                    <a href="/user_information_record" class="btn custom-btn mt-3 mt-lg-4">交易紀錄</a>
                                     <a href="/user_information_sellerpage" class="btn custom-btn mt-3 mt-lg-4">我的賣場</a>
-                                    <a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">問題回報</a>
+                                    <!--<a href="/user_information_profile" class="btn custom-btn mt-3 mt-lg-4">我要申訴</a>-->
                                     <a href="/grievance" class="btn custom-btn mt-3 mt-lg-4">我要申訴</a>
-                                </div>
+                                </div>             
                             </div>
 
                             <div class="social-share d-flex">

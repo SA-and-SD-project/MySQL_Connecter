@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>詳細書籍資訊</title>
+    <title>書籍詳細資訊</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,15 +92,6 @@
 
                         {% if session['A_StuID'] %}
                         <!--已登入-->
-                        <li class="nav-item">
-                            <a class="nav-link click" href="/star">關注中</a>
-                        </li>
-                        {% else %}
-                        <!--沒有登入-->
-                        {% endif %}
-
-                        {% if session['A_StuID'] %}
-                        <!--已登入-->
                         {% else %}
                         <!--沒有登入-->
                         <li class="nav-item">
@@ -182,7 +173,8 @@
                     <div class="clearfix">
                         <form id="purchaseForm" method="POST" action="/order">
                             <input type="hidden" name="B_BookID" value="{{ book['B_BookID'] }}">
-                            <button type="button"  class="btn custom-btn mt-3 mt-lg-4" onclick="confirmPurchase()">
+                            <button type="button"  class="btn custom-btn mt-3 mt-lg-4" onclick="confirmPurchase()" 
+                                {% if book['B_SaleStatus'] != '賣家已上架' %} disabled {% endif %}>
                                 購買
                             </button>
                         </form>
@@ -198,36 +190,34 @@
                                 <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <p id="book_status"></p>
-                                        <script>
-                                            var statusMapping = {
-                                                1: "書本使用狀態: 全使用過",
-                                                2: "書本使用狀態: 25%未翻閱",
-                                                3: "書本使用狀態: 50%未翻閱",
-                                                4: "書本使用狀態: 75%未翻閱",
-                                                5: "書本使用狀態: 90%以上未翻閱",
-                                            };
-                                            
-                                            var n = {{ book['B_BookStatus'] }};
-                                            var bookStatusElement = document.getElementById("book_status");
-                                            
-                                            if (statusMapping[n]) {
-                                                bookStatusElement.innerHTML = statusMapping[n];
-                                            } else {
-                                                bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
-                                            }
-                                            
-                                        </script>
+                                            <a id="book-status"></a>
                                     </button>
-                                    
                                 </h2>
+
+                                    <script>
+                                        var n = {{ book['B_BookStatus'] }};
+                                        var bookStatusElement = document.getElementById("book-status");
+                                        if (n == 1) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 全使用過";
+                                        } else if (n == 2) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 25%未翻閱";
+                                        } else if (n == 3) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 50%未翻閱";
+                                        } else if (n == 4) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 75%未翻閱";
+                                        } else if (n == 5) {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 90%以上未翻閱";
+                                        } else {
+                                            bookStatusElement.innerHTML = "書本使用狀態: 未顯示";
+                                        }
+                                    </script>
 
                                 <div id="collapseOne" class="accordion-collapse collapse show"
                                     aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>此二手書本被翻閱過的頁數，(以每本書的總頁數做百分比計算):</strong>
-                                        以100頁的書本為例，全使用過可能為75頁以上都被翻閱過，書況有可能不佳，50%未翻閱可能已經被翻閱了55~45頁左右，
-                                        90%未翻閱過，其受損程度可能就極其微小。
+                                        <strong>此二手書本被翻閱過的頁數，(以每本書的總頁數做百分比計算)：</strong><br>
+                                        以100頁的書本為例，<br>全使用過可能為75頁以上都被翻閱過，可能較有使用痕跡；<br>
+                                        50%未翻閱可能已經被翻閱了55~45頁左右；<br>90%未翻閱過，其受損程度可能就極其微小。
                                     </div>
                                 </div>
                             </div>
@@ -243,8 +233,9 @@
                                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                     data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <strong>販賣者想讓您額外得知的訊息:</strong> 可能是提供您更多書籍的書況資訊，或是其他有吸引力的條件
-                                        如:書中有精美筆記、有教授額外提醒的重點劃記...等等
+                                        <strong>販賣者想讓您額外得知的訊息：</strong><br>
+                                        可能是提供您更多書籍的書況資訊，或是其他有吸引力的條件，<br>
+                                        如：書中有精美筆記、有教授額外提醒的重點劃記......
                                     </div>
                                 </div>
                             </div>
@@ -275,6 +266,7 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="marketing-tab" data-bs-toggle="tab"
                                 data-bs-target="#marketing-tab-pane" type="button" role="tab"
+                                aria-controls="marketing-tab-pane" aria-selected="false">交流版</button>
                                 aria-controls="marketing-tab-pane" aria-selected="false">交流版</button>
                         </li>
 
@@ -390,69 +382,23 @@
                                 <!--關於賣家-->
 
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
-                                        <div class="custom-block bg-white shadow-lg">
-                                            <a href="topics-detail.html">
-                                                <div class="d-flex">
-                                                    <div>
-                                                        <h5 class="mb-2">Investment</h5>
-
-                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
-                                                    </div>
-
-                                                    <span class="badge bg-finance rounded-pill ms-auto">30</span>
-                                                </div>
-
-                                                <img src="../static/images/topics/undraw_Finance_re_gnv2.png"
-                                                    class="custom-block-image img-fluid" alt="">
-                                            </a>
-                                        </div>
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <h4 class="mb-0">賣家基本資料</h4>
+                                        <h5></h5>
                                     </div>
 
-                                    <div class="col-lg-6 col-md-6 col-12">
-                                        <div class="custom-block custom-block-overlay">
-                                            <div class="d-flex flex-column h-100">
-                                                <img src="../static/images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg"
-                                                    class="custom-block-image img-fluid" alt="">
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <h5>賣家：{{ saler['A_Nickname'] }}（{{ saler['A_StuID'] }}）</h5>
 
-                                                <div class="custom-block-overlay-text d-flex">
-                                                    <div>
-                                                        <h5 class="text-white mb-2">Finance</h5>
+                                        <h5><img src="../static/uploads/{{ saler['A_image'] }}"
+                                            class="custom-block-image img-fluid" alt=""></h5>
+                                    </div>
 
-                                                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur
-                                                            adipisicing elit. Sint animi necessitatibus aperiam
-                                                            repudiandae nam omnis</p>
-
-                                                        <a href="topics-detail.html"
-                                                            class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
-                                                    </div>
-
-                                                    <span class="badge bg-finance rounded-pill ms-auto">25</span>
-                                                </div>
-
-                                                <div class="social-share d-flex">
-                                                    <p class="text-white me-4">Share:</p>
-
-                                                    <ul class="social-icon">
-                                                        <li class="social-icon-item">
-                                                            <a href="#" class="social-icon-link bi-twitter"></a>
-                                                        </li>
-
-                                                        <li class="social-icon-item">
-                                                            <a href="#" class="social-icon-link bi-facebook"></a>
-                                                        </li>
-
-                                                        <li class="social-icon-item">
-                                                            <a href="#" class="social-icon-link bi-pinterest"></a>
-                                                        </li>
-                                                    </ul>
-
-                                                    <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
-                                                </div>
-
-                                                <div class="section-overlay"></div>
-                                            </div>
-                                        </div>
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <h5>信用評價：{{ saler['A_CreditPoint'] }}（共{{ saler['A_TradeCount'] }}筆交易）</h5>
+                                        <br>
+                                        <br>
+                                        <h5>違規次數：{{ saler['A_ViolationCount'] }}</h5>
                                     </div>
                                 </div>
                             </div>

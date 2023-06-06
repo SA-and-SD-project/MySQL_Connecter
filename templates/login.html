@@ -8,7 +8,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Topic Listing Contact Page</title>
+  <title>登入</title>
 
   <!-- CSS FILES -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,15 +62,6 @@ https://templatemo.com/tm-590-topic-listing
             <li class="nav-item">
               <a class="nav-link click" href="/login">登入</a>
             </li>
-            {% endif %}
-
-            {% if session['A_StuID'] %}
-            <!--已登入-->
-            <li class="nav-item">
-              <a class="nav-link click" href="/star">關注中</a>
-            </li>
-            {% else %}
-            <!--沒有登入-->
             {% endif %}
 
             {% if session['A_StuID'] %}
